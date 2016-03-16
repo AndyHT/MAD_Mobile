@@ -1,0 +1,20 @@
+{
+  "name": "Advertisers",
+  "authors": [
+    "Teng <843018739@qq.com>"
+  ],
+  "description": "MAD-Advertisers",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
