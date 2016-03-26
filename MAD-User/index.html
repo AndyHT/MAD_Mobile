@@ -7,10 +7,39 @@
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <script type="text/javascript" charset="utf-8">
-      	mui.init();
+      	mui.init({
+      		
+					statusBarBackground: '#ff0000'
+				
+      	});
+      	mui.plusReady(function(){
+      		var tologin=document.getElementById('tologin');
+      		var tosignup=document.getElementById('tosignup');
+      		tologin.addEventListener('tap',function(event){
+      			mui.openWindow({
+      				url:'login.html',
+      				prepoad:true,	
+      				show:{
+      					anishow:'pop-in'
+      				}
+      			
+      			})
+      		},false);
+      		tosignup.addEventListener('tap',function(event){
+      			mui.openWindow({
+      				url:'signup.html',
+      				preload:true,
+      				show:{
+      					anishow:'pop-in'
+      				}
+      			})
+      		},false);
+      	})
+      	
     </script>
 </head>
 <body>
-	
+	 <a id="tologin">登录</a>
+	 <a id="tosignup">注册</a>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/gjq_login.css"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<div class="mui-container-fluid container">
+		<center><img class="icon" src="img/user/icon.png"/></center>
+		<center><a class="move-ad">移动的广告MAD</a></center>
+		<!--<div class="mui-content inputs">-->
+			<div class="mui-input-row login">
+				<label><img class="input-img" src="img/user/昵称.png"/><a class="input-a">:</a></label>
+				<input type="text" class="mui-input-clear mui-input input-log" placeholder="昵称"/>
+			</div>
+			<div class="mui-input-row login">
+				<label><img class="input-img" src="img/user/手机号.png"/><a class="input-a">:</a></label>
+				<input type="text" class="mui-input-clear mui-input input-log" placeholder="手机号"/>
+			</div>
+			<div class="mui-input-row login">
+				<label><img class="input-img" src="img/user/密码.png"/><a class="input-a">:</a></label>
+				<input type="text" class="mui-input-clear mui-input input-log" placeholder="密码"/>
+			</div>
+			<div class="mui-input-row login">
+				<label><img class="imput-imgf" src="img/user/密码.png"/ width="20%" style="margin-bottom: -2%;
+	margin-left: 5%;margin-right: -5%;"><a class="input-a">:</a></label>
+				<input type="text" class="mui-input-clear mui-input input-log" placeholder="确认密码"/>
+			</div>
+			
+			
+			<button class="mui-btn-block mui-btn login-btn">
+				注册
+			</button>
+			
+			<div class="login-bottom">
+				<center><a id="tologin">已有账号？现在登录</a></center>
+			</div>
+			<div class="block">
+				
+			</div>
+		<!--</div>-->
+	</div>
+	<script src="js/mui.enterfocus.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init({
+					statusBarBackground: '#ff0000'
+				});
+		mui.plusReady(function(){
+			var tologin=document.getElementById('tologin');
+		tologin.addEventListener('tap',function(event){
+			mui.openWindow({
+				url:'login.html',
+				preload:true,
+				show:{
+					anishow:'pop-in'
+				}
+			})
+		},false);
+		})
+		
+	</script>
+</body>
+</html>
