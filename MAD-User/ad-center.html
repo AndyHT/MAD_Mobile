@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar-nav mui-bar">
+		<a class="mui-btn mui-btn-link mui-pull-left">筛选</a>
+		<h1 class="mui-title">广告中心</h1>
+		<a class="mui-btn mui-btn-link mui-pull-right"> 消息</a>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active">
+				<div class="bar-img">
+					<img src="img/user/主页selected.png"/>
+				</div>
+				<h6><span class="mui-tab-label">广告中心</span></h6>
+			</a>
+			<a class="mui-tab-item" id="toadused">
+				<div class="bar-img">
+					<img src="img/user/已接广告icon.png"/>
+				</div>
+				<h6><span class="mui-tab-label">已接广告</span></h6>
+			</a>
+			<a class="mui-tab-item" id="toprofit">
+				<div class="bar-img">
+					<img src="img/user/收益统计icon.png"/>
+				</div>
+				<h6><span class="mui-tab-label">收益统计</span></h6>
+			</a>
+			<a class="mui-tab-item" id="tousercenter">
+				<div class="bar-img">
+					<img src="img/user/昵称.png"/>
+				</div>
+				<h6><span class="mui-tab-label">个人中心</span></h6>
+			</a>
+		</nav>
+	<div class="mui-content">
+		<div class="mui-input-row center_sea">
+			<input type="search" class="mui-input-clear" placeholder="Search">
+		</div>
+		<ul class="mui-table-view mui-table-view-stripped mui-table-view-condensed" >
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell mui-col-xs-1 img-left-div">
+						<img class="img-left" src="img/user/已接广告icon.png" style=""/>
+					</div>
+					<div class="mui-table-cell mui-col-xs-8">
+						<h4 class="mui-ellipsis">迪奥假我真香水</h4>
+						<div class="mui-table">
+							<div class="mui-table-cell mui-col-xs-1">
+								<img src="img/user/annotation.png"/>
+							</div>
+							<div class="mui-table-cell mui-col-xs-11">
+								<h5>黄浦区黄埔南路111号至1111号</h5>
+							</div>
+						</div>
+						
+					</div>
+					<div class="mui-table-cell mui-col-xs-3 mui-text-right">
+						<span class="mui-h6">
+							¥0.22元／条
+						</span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell mui-col-xs-1 img-left-div">
+						<img class="img-left" src="img/user/已接广告icon.png" style=""/>
+					</div>
+					<div class="mui-table-cell mui-col-xs-8">
+						<h4 class="mui-ellipsis">迪奥假我真香水</h4>
+						<div class="mui-table">
+							<div class="mui-table-cell mui-col-xs-1">
+								<img src="img/user/annotation.png"/>
+							</div>
+							<div class="mui-table-cell mui-col-xs-11">
+								<h5>黄浦区黄埔南路111号至1111号</h5>
+							</div>
+						</div>
+						
+					</div>
+					<div class="mui-table-cell mui-col-xs-3 mui-text-right">
+						<span class="mui-h6">
+							¥0.22元／条
+						</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		mui.init({
+					statusBarBackground: '#ff0000'
+				});
+		mui.plusReady(function(){
+			var toadused=document.getElementById('toprofit');
+			toadused.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'profit.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+			var toadcenter=document.getElementById('tousercenter');
+			toadcenter.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'user-center.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+			var toadcenter=document.getElementById('toadused');
+			toadcenter.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'ad-used.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+		})
+	</script>
+				
+</body>
+</html>

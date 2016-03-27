@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar-nav mui-bar">
+		<!--<a class="mui-btn mui-btn-link mui-pull-left">筛选</a>-->
+		<h1 class="mui-title">个人中心</h1>
+		<a class="mui-btn mui-btn-link mui-pull-right"> 修改</a>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" id="toadcenter">
+				<div class="bar-img">
+					<img src="img/user/主页icon.png"/>
+				</div>
+				<h6><span class="mui-tab-label">广告中心</span></h6>
+			</a>
+			<a class="mui-tab-item" id="toadused">
+				<div class="bar-img">
+					<img src="img/user/已接广告icon.png"/>
+				</div>
+				<h6><span class="mui-tab-label">已接广告</span></h6>
+			</a>
+			<a class="mui-tab-item" id="toprofit">
+				<div class="bar-img">
+					<img src="img/user/收益统计icon.png"/>
+				</div>
+				<h6><span class="mui-tab-label">收益统计</span></h6>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<div class="bar-img">
+					<img src="img/user/个人中心selected.png"/>
+				</div>
+				<h6><span class="mui-tab-label">个人中心</span></h6>
+			</a>
+		</nav>
+		<div class="mui-content">
+			
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<div class="mui-row">
+				<div class="mui-col-xs-2">
+					<img class="img-left" src="img/user/个人中心selected.png"/>
+				</div>
+				<div class="mui-col-xs-8">
+					<h5 class="h5-big">霍滕</h5>
+					<h5>驾驶证号：3727XXXXXXXX8372</h5>
+				</div>
+				<div class="mui-col-xs-2">
+					<button class="mui-btn info-btn">点击认证</button>
+				</div>
+			</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right mui-row">
+						<span class="mui-col-xs-1">
+							<img class="allimg" src="img/user/密码.png"/>
+						</span>
+						<h5 class="mui-col-xs-10 h4-big">修改密码</h5>
+					</a>
+				</li>
+			</ul>
+			<h5 class="left-10">基本信息</h5>
+			<ul class="mui-table-view">
+				
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<h5>手机号</h5>
+						<h5 class="h5-big">15627362837</h5>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<h5>邮箱</h5>
+						<h5 class="h5-big">youxiang@uu.com</h5>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<h5>性别</h5>
+						<h5 class="h5-big">男</h5>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<h5>所在地</h5>
+						<h5 class="h5-big">上海市&nbsp;黄浦区</h5>
+					</a>
+				</li>
+			</ul>
+			<h5 class="left-10">行驶证照片</h5>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<img src="img/user/icon.png"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+	<script type="text/javascript">
+		mui.init({
+					statusBarBackground: '#ff0000'
+				});
+		mui.plusReady(function(){
+			var toadused=document.getElementById('toprofit');
+			toadused.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'profit.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+			var toadcenter=document.getElementById('toadcenter');
+			toadcenter.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'ad-center.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+			var toadcenter=document.getElementById('toadused');
+			toadcenter.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'ad-used.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+		})
+	</script>
+</body>
+</html>

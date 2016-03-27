@@ -35,11 +35,21 @@
       			})
       		},false);
       	})
-      	
+      	mui.plusReady(function(){
+      		var toadcenter=document.getElementById('toadcenter');
+      		mui.openWindow({
+      			url:'ad-center.html',
+      			preload:true,
+      			show:{
+      				anishow:'pop-in'
+      			}
+      		})
+      	},false);
     </script>
 </head>
 <body>
 	 <a id="tologin">登录</a>
 	 <a id="tosignup">注册</a>
+	 <a id="toadcenter">个人中心</a>
 </body>
 </html>

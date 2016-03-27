@@ -1,0 +1,29 @@
+h4,h5{
+	margin: 0 0;
+	display: inline;
+}
+.inline{
+	display: inline;
+}
+
+.img-left-div{
+	width: 15%;
+}
+.bar-img{
+	margin: 0 auto;
+	margin-bottom: -6%;
+}
+
+.center_sea{
+	margin-bottom:-4% ;
+	padding: 3pt 5pt;
+}.img-left{
+	width: 90%;
+	margin-bottom: -35%;
+	margin-left: -15%;
+}
+.black-h5{
+	color:black !important;
+	font-size: 90%;
+	margin-left: -6%;
+}

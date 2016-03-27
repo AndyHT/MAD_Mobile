@@ -1,0 +1,57 @@
+.mui-table h4,.mui-table h5,.mui-table .mui-h5,.mui-table .mui-h6,.mui-table p{
+	margin-top: 0;
+   }
+.mui-table h4{
+    line-height: 21px;
+    font-weight: 500;
+   }
+.mui-table .oa-icon{
+	position: absolute;
+	right:0;
+	bottom: 0;
+	}
+.mui-table .oa-icon-star-filled{
+	color:#f14e41;
+    }
+.img-left{
+	width: 90%;
+	margin-bottom: -35%;
+	margin-left: -15%;
+}
+.center_sea{
+	margin-bottom:-4% ;
+	padding: 3pt 5pt;
+}
+.img-left-div{
+	width: 15%;
+}
+.bar-img{
+	margin: 0 auto;
+	margin-bottom: -6%;
+}
+.info-btn{
+	background-color: #FEB23C;
+	border: 0pt solid;
+	border-radius: 10pt;
+	height: 25pt;
+	color: white;
+	margin-left: -25%;
+
+}
+.top-info{
+	height: 30pt !important;
+}
+.h5-big{
+	font-size: 120%;
+	color: black;
+}
+.allimg{
+	width: 70%;
+}
+.h4-big{
+	font-size: 12pt;
+	color: black;
+}
+.left-10{
+	margin-left: 10pt;
+}
