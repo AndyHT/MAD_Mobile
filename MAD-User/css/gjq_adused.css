@@ -27,3 +27,56 @@ h4,h5{
 	font-size: 90%;
 	margin-left: -6%;
 }
+.top-nav{
+	top:30pt ;
+	position:fixed
+
+}
+.echart-big{
+	width: 90%;
+	height: 250pt;
+	margin-left: 5%;
+}
+#echartleft{
+	
+	width: 120pt;
+	height: 120pt;
+	float: left;
+	margin-top: 10%;
+}
+#echartright{
+	float: right;
+	width: 120pt;
+	height: 120pt;
+	margin-top: 10%;
+}
+
+.chart2{
+	margin: 5% 5%;
+}
+.echartline{
+	width:90%;
+	height: 200pt;
+	margin-bottom: 25%;
+	margin-left: 5%;
+}
+.head-top{
+	background-color: #41B17C;
+}
+.white-text{
+	color: white !important;
+}
+.green-text{
+	color: #468181;
+}
+.x-bc{
+	background-color: #C1C2C2;
+}
+.y-bc{
+	background-color: #FEB23C;
+}
+.img-left-used{
+	width: 30pt;
+	height: 20pt !important;
+	margin-right: 5% !important;
+}

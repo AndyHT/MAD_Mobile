@@ -20,9 +20,10 @@
 				<label><img class="input-img" src="img/user/手机号.png"/><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="登录手机号"/>
 			</div>
+			
+			
 			<div class="mui-input-row login">
-				<label><img class="imput-img2" src="img/user/密码.png" style="margin-bottom: -2%;
-	margin-left: 5%;margin-right: -5%;"/><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/密码.png" /><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="密码"/>
 			</div>
 			<button class="mui-btn-block login-btn">
@@ -31,7 +32,7 @@
 			
 			<div class="login-bottom">
 				<a class="bot-left" id="tosignup">没有账号，现在注册</a>
-				<a class="bot-right" href="">忘记密码</a>
+				<a class="bot-right" id="toindex">忘记密码</a>
 			</div>
 			<div class="block">
 				
@@ -40,7 +41,7 @@
 	</div>
 	<script type="text/javascript">
 		mui.init({
-					statusBarBackground: '#ff0000'
+					statusBarBackground: '#41B17C'
 				});
 		mui.plusReady(function(){
 			var tosignup=document.getElementById('tosignup');
@@ -53,6 +54,16 @@
 				}
 			});
 		},false);
+		var toindex=document.getElementById('toindex');
+			toindex.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
 		})
 		
 	</script>

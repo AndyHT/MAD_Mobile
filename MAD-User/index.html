@@ -9,12 +9,13 @@
     <script type="text/javascript" charset="utf-8">
       	mui.init({
       		
-					statusBarBackground: '#ff0000'
+					statusBarBackground: '#41B17C'
 				
       	});
       	mui.plusReady(function(){
       		var tologin=document.getElementById('tologin');
       		var tosignup=document.getElementById('tosignup');
+      		var toadcenter=document.getElementById('toadcenter');
       		tologin.addEventListener('tap',function(event){
       			mui.openWindow({
       				url:'login.html',
@@ -34,17 +35,16 @@
       				}
       			})
       		},false);
+      		toadcenter.addEventListener('tap',function(event){
+      			mui.openWindow({
+      				url:'ad-center.html',
+      				preload:true,
+      				show:{
+      					anishow:'pop-in'
+      				}
+      			})
+      		},false);
       	})
-      	mui.plusReady(function(){
-      		var toadcenter=document.getElementById('toadcenter');
-      		mui.openWindow({
-      			url:'ad-center.html',
-      			preload:true,
-      			show:{
-      				anishow:'pop-in'
-      			}
-      		})
-      	},false);
     </script>
 </head>
 <body>

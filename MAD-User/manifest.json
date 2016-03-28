@@ -189,5 +189,128 @@
 				}
 			}
 		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"ad-center.html",
+					"signup.html",
+					"login.html"
+				],
+				"priority": 0
+			},
+			"ad-center.html": {
+				"resources": [
+					"img/user/已接广告icon.png",
+					"img/user/昵称.png",
+					"img/user/annotation.png",
+					"img/user/收益统计icon.png",
+					"img/user/主页selected.png",
+					"css/gjq_usercenter.css",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"profit.html"
+				],
+				"priority": 0
+			},
+			"profit.html": {
+				"resources": [
+					"img/user/主页icon.png",
+					"js/echarts.min.js",
+					"img/user/收益统计selected.png",
+					"css/gjq_adused.css",
+					"img/user/已接广告icon.png",
+					"img/user/昵称.png",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"user-center.html",
+					"ad-used.html"
+				],
+				"priority": 0
+			},
+			"user-center.html": {
+				"resources": [
+					"img/user/密码.png",
+					"img/user/个人中心selected.png",
+					"fonts/mui.ttf",
+					"img/user/收益统计icon.png",
+					"img/user/icon.png",
+					"css/gjq_usercenter.css",
+					"img/user/已接广告icon.png",
+					"img/user/主页icon.png",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"ad-used.html",
+					"index.html"
+				],
+				"priority": 0
+			},
+			"ad-used.html": {
+				"resources": [
+					"img/user/已接广告selected.png",
+					"css/gjq_adused.css",
+					"img/user/主页icon.png",
+					"img/user/昵称.png",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"img/user/已下架icon.png",
+					"img/user/收益统计icon.png",
+					"img/user/可播放icon.png",
+					"img/user/已接广告icon.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"signup.html": {
+				"resources": [
+					"img/user/手机号.png",
+					"css/gjq_login.css",
+					"js/mui.enterfocus.js",
+					"img/user/昵称.png",
+					"img/user/密码.png",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"img/user/icon.png"
+				],
+				"refer": [
+					"login.html"
+				],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"img/user/手机号.png",
+					"css/gjq_login.css",
+					"img/user/密码.png",
+					"img/user/icon.png",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"signup.html",
+					"index.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"css/mui.css",
+				"log-mb.html",
+				"bower.json",
+				"js/mui.js"
+			]
+		}
 	}
 }

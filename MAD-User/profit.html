@@ -12,10 +12,10 @@
     </script>
 </head>
 <body>
-	<header class="mui-bar-nav mui-bar">
-		<a class="mui-btn mui-btn-link mui-pull-left">筛选</a>
-		<h1 class="mui-title">收益统计</h1>
-		<a class="mui-btn mui-btn-link mui-pull-right"> 消息</a>
+	<header class="mui-bar-nav mui-bar head-top">
+		<a class="mui-btn mui-btn-link mui-pull-left white-text">筛选</a>
+		<h1 class="mui-title white-text">收益统计</h1>
+		<a class="mui-btn mui-btn-link mui-pull-right white-text"> 消息</a>
 	</header>
 	<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active" id="toadcenter">
@@ -43,13 +43,44 @@
 				<h6><span class="mui-tab-label">个人中心</span></h6>
 			</a>
 		</nav>
+		
 	<div class="mui-content">
-		
-		
+		<div  class="mui-bar mui-bar-tab top-nav">
+		    <a class="mui-tab-item" href="#">
+		        年收益
+		    </a>
+		    <a class="mui-tab-item" href="#">
+		        月收益
+		    </a>
+		    <a class="mui-tab-item" href="#">
+		        周收益
+		    </a>
+		    <a class="mui-tab-item" href="#">
+		        日收益
+		    </a>
+		</div>
+		<div class="chart2">
+			
+				<div id="echartleft">
+					
+				</div>
+			
+			
+				<div id="echartright">
+					
+				</div>
+			<
+		</div>
+		<div class="echartline" id="echartline">
+			
+		</div>
+		<div class="echart-big" id="echartbig">
+			
+		</div>
 	</div>
 	<script type="text/javascript">
 		mui.init({
-					statusBarBackground: '#ff0000'
+					statusBarBackground: '#41B17C'
 				});
 		mui.plusReady(function(){
 			var toadused=document.getElementById('toadused');
@@ -84,6 +115,207 @@
 			},false);
 		})
 	</script>
+	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var echartbig=echarts.init(document.getElementById('echartbig'));
+		var echartleft=echarts.init(document.getElementById('echartleft'));
+		var echartright=echarts.init(document.getElementById('echartright'));
+		var echartline=echarts.init(document.getElementById('echartline'));
+		var option2={
+			    title : {
+			        text: '已收广告收益排行',
+			        top:'10%',
+			        x:'left'
+			    },
+			    tooltip : {
+			        trigger: 'item',
+			        formatter: "{a} <br/>{b} : {c} ({d}%)"
+			    },
+			    legend: {
+			        orient: 'vertical',
+			        left: 'left',
+			        top:'20%',
+			        data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+			    },
+			    series : [
+			        {
+			            name: '访问来源',
+			            type: 'pie',
+			            radius : '55%',
+			            center: ['70%', '40%'],
+			            label:{
+			            	normal:{
+			            		position:'inner'
+			            	}
+			            },
+			            data:[
+			                {value:5, name:'直接访问',symbolSize:40},
+			                {value:5, name:'邮件营销'},
+			                {value:5, name:'联盟广告'},
+			                {value:5, name:'视频广告'},
+			                {value:5, name:'搜索引擎'}
+			            ],
+			            itemStyle: {
+			                emphasis: {
+			                    shadowBlur: 1,
+			                    shadowOffsetX: 0,
+			                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+			                }
+			            }
+			        }
+			    ],
+			    
+			};
+
+		var option1={
+			title:{
+				text:'今日接单统计',
+				x:'center'
+			},
+			tooltip:{
+				trigger:'item',
 				
+			},
+			legend:{
+				orient:'vertical',
+				left:'left',
+				data:['ss','ss']
+			},
+			series:[
+			{
+				name:'fssg',
+				type:'pie',
+				radius:'55%',
+				center:["50%",'60%'],
+				label:{
+					normal:{
+						position:'inner'
+					}
+				},
+				data:[
+				{value:1,name:'s'},
+				{value:7,name:'f'}
+				],
+				itemStyle:{
+					emphasis:{
+						shadowBlur:10,
+						shadowOffsetX:0,
+						shadowColor:'rgba(0,0,0,0.5)'
+					}
+				}
+			}]
+			
+		};
+		var option3={
+			title:{
+				text:'可结算／总收益',
+				x:'center'
+			},
+			tooltip:{
+				trigger:'item',
+				
+			},
+			legend:{
+				orient:'vertical',
+				left:'left',
+				data:['ss','ss']
+			},
+			series:[
+			{
+				label:{
+					normal:{
+						position:'inner'
+					}
+				},
+				name:'fssg',
+				type:'pie',
+				radius:'55%',
+				center:["50%",'60%'],
+				data:[
+				{value:333,name:'d'}
+				
+				],
+				itemStyle:{
+					emphasis:{
+						shadowBlur:10,
+						shadowOffsetX:0,
+						shadowColor:'rgba(0,0,0,0.5)'
+					}
+				}
+			}]
+			
+		};
+		var optionline={
+				    title: {
+				        text: '今日累计广告播放量',
+				        x:'center',
+				        subtext: '广告／条'
+				    },
+				    tooltip: {
+				        trigger: 'axis'
+				    },
+				    legend: {
+				       // data:['最高气温','最低气温']
+				    },
+				    toolbox: {
+				        show: true,
+				        feature: {
+				            dataZoom: {},
+				            dataView: {readOnly: false},
+				            magicType: {type: ['line', 'bar']},
+				            restore: {},
+				            saveAsImage: {}
+				        }
+				    },
+				    xAxis:  {
+				        type: 'category',
+				        boundaryGap: false,
+				        data: ['周一','周二','周三','周四','周五','周六','周日']
+				    },
+				    yAxis: {
+				        type: 'value',
+				        axisLabel: {
+				            formatter: '{value} °C'
+				        }
+				    },
+				    series: [
+				        {
+				            name:'最高气温',
+				            type:'line',
+				            data:[11, 11, 15, 13, 12, 13, 10],
+				            markPoint: {
+				                data: [
+				                    {type: 'max', name: '最大值'},
+				                    {type: 'min', name: '最小值'}
+				                ]
+				            },
+				            markLine: {
+				                data: [
+				                    {type: 'average', name: '平均值'}
+				                ]
+				            }
+				        },
+				        {
+				            name:'最低气温',
+				            type:'line',
+				            data:[1, -2, 2, 5, 3, 2, 0],
+				            markPoint: {
+				                data: [
+				                    {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+				                ]
+				            },
+				            markLine: {
+				                data: [
+				                    {type: 'average', name: '平均值'}
+				                ]
+				            }
+				        }
+				    ]
+				};
+		echartline.setOption(optionline);
+		echartbig.setOption(option2);
+		echartright.setOption(option1);
+		echartleft.setOption(option3);
+	</script>
 </body>
 </html>

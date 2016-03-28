@@ -14,9 +14,16 @@
 	color:#f14e41;
     }
 .img-left{
-	width: 90%;
-	margin-bottom: -35%;
-	margin-left: -15%;
+	width: 40%;
+	margin-bottom: 20%;
+	margin-top: 20%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.img-left-ad{
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: -30%;
 }
 .center_sea{
 	margin-bottom:-4% ;
@@ -46,7 +53,9 @@
 	color: black;
 }
 .allimg{
-	width: 70%;
+	width: 15pt;
+	margin: 0 auto;
+	margin-left: 5%;
 }
 .h4-big{
 	font-size: 12pt;
@@ -54,4 +63,11 @@
 }
 .left-10{
 	margin-left: 10pt;
+}
+
+.head-top{
+	background-color: #41B17C;
+}
+.white-text{
+	color: white !important;
 }
