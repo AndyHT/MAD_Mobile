@@ -247,7 +247,7 @@
 		};
 		var optionline={
 				    title: {
-				        text: '今日累计广告播放量',
+				        text: '本周累计广告播放量',
 				        x:'center',
 				        subtext: '广告／条'
 				    },
@@ -275,7 +275,7 @@
 				    yAxis: {
 				        type: 'value',
 				        axisLabel: {
-				            formatter: '{value} °C'
+				            formatter: '{value} '
 				        }
 				    },
 				    series: [
@@ -316,6 +316,19 @@
 		echartbig.setOption(option2);
 		echartright.setOption(option1);
 		echartleft.setOption(option3);
+		var ran={};
+		ran.n=function(){
+				return Math.round(Math.random()*15);
+			}
+		setInterval(function(){
+			for (var i=0;i<5;i++) {
+				optionline.series[0].data[i+1]=ran.n();
+				optionline.series[1].data[i+2]=ran.n();
+				option2.series[0].data[i].value=ran.n();
+			}
+			echartline.setOption(optionline);
+			echartbig.setOption(option2);
+		},1000);
 	</script>
 </body>
 </html>

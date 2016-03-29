@@ -26,7 +26,7 @@
 				<label><img class="input-img" src="img/user/密码.png" /><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="密码"/>
 			</div>
-			<button class="mui-btn-block login-btn">
+			<button class="mui-btn-block login-btn" id="toadcenter">
 				登录
 			</button>
 			
@@ -58,6 +58,16 @@
 			toindex.addEventListener('tap',function(){
 				mui.openWindow({
 					url:'index.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+		var toadcenter=document.getElementById('toadcenter');
+			toadcenter.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'ad-center.html',
 					show:{
 						anishow:'pop-in'
 					},
