@@ -48,7 +48,7 @@
 			<input type="search" class="mui-input-clear" placeholder="Search">
 		</div>
 		<ul class="mui-table-view mui-table-view-stripped mui-table-view-condensed" >
-			<li class="mui-table-view-cell">
+			<li class="mui-table-view-cell"	id="toaddetail">
 				<div class="mui-table">
 					<div class="mui-table-cell mui-col-xs-1 img-left-div">
 						<img class="img-left-ad" src="img/user/已接广告icon.png" style=""/>
@@ -128,6 +128,16 @@
 			toadcenter.addEventListener('tap',function(){
 				mui.openWindow({
 					url:'ad-used.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+			var toaddetail=document.getElementById('toaddetail');
+			toaddetail.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'detail.html',
 					show:{
 						anishow:'pop-in'
 					},
