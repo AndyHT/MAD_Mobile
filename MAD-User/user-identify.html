@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
+
+</head>
+<body>
+	<header class="mui-bar-nav mui-bar head-top">
+		<!--<a class="mui-btn mui-btn-link mui-pull-left">筛选</a>-->
+		<h1 class="mui-title white-text">身份认证</h1>
+		<a class="mui-action-back mui-btn mui-btn-link mui-pull-left white-text">取消</a>
+	</header>
+	<div class="mui-content" id="aaa" style="background-color: blue;">
+		sss
+	</div>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	var screenHeight = screen.height;
+      		
+      		console.log(screenHeight);
+      		mui(".mui-content")[0].style.height=screenHeight + "px";
+      	mui.plusReady(function(){
+      		var screenHeight = screen.height - 48;
+      		
+      		console.log(screenHeight);
+      		mui(".mui-content")[0].style.height=screenHeight + "px";
+      		mui(".mui-content")[0].style.marginTop = "48px";
+      	});
+    </script>
+</body>
+</html>
