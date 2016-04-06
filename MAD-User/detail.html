@@ -50,7 +50,7 @@
 		<span>
 			1983个人已接单
 		</span>
-		<a class="mui-pull-right">立即接单</a>
+		<a class="mui-pull-right" id="toConfirmOrder">立即接单</a>
 	</div>
 	<div class="info">
 		<span id="title-info">
@@ -61,5 +61,25 @@
 		</span>
 	</div>
 	</div>
+	<script type="text/javascript">
+		mui.init({
+					statusBarBackground: '#41B17C'
+				});
+		mui.plusReady(function(){
+			var toConfirmOrder=document.getElementById('toConfirmOrder');
+			toConfirmOrder.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'confirm-order.html',
+					show:{
+						anishow:'pop-in'
+					},
+					styles: {
+								popGesture: 'hide'
+					},
+					preload:true
+				})
+			},false);
+		})
+	</script>
 </body>
 </html>

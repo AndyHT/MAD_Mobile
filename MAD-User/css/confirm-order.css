@@ -1,0 +1,23 @@
+#inback{
+	font-size: 12pt;
+}
+#back,#inback,#title{
+	color: white;
+}
+.top-view{
+	margin-top: -10pt;
+	background-color: #ededed;
+}
+.top-view>h4{
+	color: #847878;
+}
+.mui-table-view-cell>h5{
+	color: #847878;
+	font-size: 12pt;
+}
+.btn-border{
+	border: 0pt solid yellow;
+	border-radius: 20pt;
+	background-color:#fdb14b;
+	color: white;
+}

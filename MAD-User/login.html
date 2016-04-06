@@ -7,9 +7,6 @@
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/gjq_login.css"/>
-    <script type="text/javascript" charset="UTF-8">
-      	mui.init();
-    </script>
 </head>
 <body>
 	<div class="mui-container-fluid container">
@@ -54,16 +51,16 @@
 				}
 			});
 		},false);
-		var toindex=document.getElementById('toindex');
-			toindex.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'index.html',
-					show:{
-						anishow:'pop-in'
-					},
-					preload:true
-				})
-			},false);
+//		var toindex=document.getElementById('toindex');
+//			toindex.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'index.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					preload:true
+//				})
+//			},false);
 		var toadcenter=document.getElementById('toadcenter');
 			toadcenter.addEventListener('tap',function(){
 				mui.openWindow({
@@ -74,7 +71,7 @@
 					preload:true
 				})
 			},false);
-		})
+		
 		var toFindPw=document.getElementById('toFindPw');
 			toFindPw.addEventListener('tap',function(){
 				mui.openWindow({
@@ -85,7 +82,7 @@
 					preload:true
 				})
 			},false);
-		})
+		});
 	</script>
 </body>
 </html>
