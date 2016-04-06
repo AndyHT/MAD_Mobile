@@ -19,7 +19,7 @@
 		<div class="mui-content">
 			<form class="mui-input-group">
 					<div class="label">
-						手机号 <button class="mui-pull-right">发送验证码</button>
+						手机号 <button class="mui-pull-right yzm">发送验证码</button>
 					</div>
 					<div class="mui-input-row">
 					
@@ -38,7 +38,9 @@
 					
 						<input type="password" placeholder="***********">
 					</div><div class="label">
-						再次输入新密码 
+						再次输入新密码 <div class="yepDiv">
+							<center><img class="yepImg" src="img/user/yep.png"/></center>
+						</div>
 					</div>
 					<div class="mui-input-row">
 					
@@ -57,19 +59,6 @@
 					statusBarBackground: '#41B17C'
 				});
 		mui.plusReady(function(){
-			var toadused=document.getElementById('toprofit');
-			toadused.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'profit.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
-				})
-			},false);
 			})
 	</script>
 </body>

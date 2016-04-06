@@ -48,25 +48,21 @@
 				preload:true,
 				show:{
 					anishow:'pop-in'
-				}
+				},
+				styles: {
+								popGesture: 'hide'
+					}
 			});
 		},false);
-//		var toindex=document.getElementById('toindex');
-//			toindex.addEventListener('tap',function(){
-//				mui.openWindow({
-//					url:'index.html',
-//					show:{
-//						anishow:'pop-in'
-//					},
-//					preload:true
-//				})
-//			},false);
 		var toadcenter=document.getElementById('toadcenter');
 			toadcenter.addEventListener('tap',function(){
 				mui.openWindow({
 					url:'ad-center.html',
 					show:{
 						anishow:'pop-in'
+					},
+					styles: {
+								popGesture: 'hide'
 					},
 					preload:true
 				})
@@ -78,6 +74,9 @@
 					url:'toFindPw.html',
 					show:{
 						anishow:'pop-in'
+					},
+					styles: {
+								popGesture: 'hide'
 					},
 					preload:true
 				})
