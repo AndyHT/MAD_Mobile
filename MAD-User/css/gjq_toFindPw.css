@@ -1,0 +1,38 @@
+.mui-input-group{
+	padding: 10pt 25pt;
+}
+.label{
+	margin-left: 10pt;
+	margin-top: 10pt;
+	margin-bottom: -5pt;
+}
+.label>button{
+	color: white;
+	/*height: 20pt;*/
+	
+}
+.changePw{
+	border: 0pt solid #61c094;
+	border-radius: 20pt;
+	background-color: #61c094;
+	color: white;
+}
+.yzm{
+	position: absolute;
+	background-color: #f2ac3f;
+	right: 10%;
+}
+.yepDiv{
+	background-color: #acd88a;
+	width: 20pt;
+	height: 20pt;
+	border: 0pt solid #61c094;
+	border-radius: 20pt;
+	position: absolute;
+	right: 30pt;
+}
+.yepImg{
+	width: 10pt;
+	height: 10pt;
+	margin-top: 5pt;
+}

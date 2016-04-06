@@ -15,7 +15,7 @@
 	<header class="mui-bar-nav mui-bar head-top">
 		<a class="mui-btn mui-btn-link mui-pull-left white-text">筛选</a>
 		<h1 class="mui-title white-text">广告中心</h1>
-		<a class="mui-btn mui-btn-link mui-pull-right white-text"> 消息</a>
+		<a class="mui-btn mui-btn-link mui-pull-right white-text" id="toInfoList"> 消息</a>
 	</header>
 	<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active">
@@ -111,6 +111,9 @@
 					show:{
 						anishow:'pop-in'
 					},
+					styles: {
+								popGesture: 'hide'
+					},
 					preload:true
 				})
 			},false);
@@ -120,6 +123,9 @@
 					url:'user-center.html',
 					show:{
 						anishow:'pop-in'
+					},
+					styles: {
+								popGesture: 'hide'
 					},
 					preload:true
 				})
@@ -131,6 +137,9 @@
 					show:{
 						anishow:'pop-in'
 					},
+					styles: {
+								popGesture: 'hide'
+					},
 					preload:true
 				})
 			},false);
@@ -138,6 +147,19 @@
 			toaddetail.addEventListener('tap',function(){
 				mui.openWindow({
 					url:'detail.html',
+					show:{
+						anishow:'pop-in'
+					},
+					styles: {
+								popGesture: 'hide'
+					},
+					preload:true
+				})
+			},false);
+			var toInfoList=document.getElementById('toInfoList');
+			toInfoList.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'info-list.html',
 					show:{
 						anishow:'pop-in'
 					},

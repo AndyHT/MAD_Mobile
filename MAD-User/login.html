@@ -7,9 +7,6 @@
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/gjq_login.css"/>
-    <script type="text/javascript" charset="UTF-8">
-      	mui.init();
-    </script>
 </head>
 <body>
 	<div class="mui-container-fluid container">
@@ -32,7 +29,7 @@
 			
 			<div class="login-bottom">
 				<a class="bot-left" id="tosignup">没有账号，现在注册</a>
-				<a class="bot-right" id="toindex">忘记密码</a>
+				<a class="bot-right" id="toFindPw">忘记密码</a>
 			</div>
 			<div class="block">
 				
@@ -51,19 +48,12 @@
 				preload:true,
 				show:{
 					anishow:'pop-in'
-				}
+				},
+				styles: {
+								popGesture: 'hide'
+					}
 			});
 		},false);
-		var toindex=document.getElementById('toindex');
-			toindex.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'index.html',
-					show:{
-						anishow:'pop-in'
-					},
-					preload:true
-				})
-			},false);
 		var toadcenter=document.getElementById('toadcenter');
 			toadcenter.addEventListener('tap',function(){
 				mui.openWindow({
@@ -71,11 +61,27 @@
 					show:{
 						anishow:'pop-in'
 					},
+					styles: {
+								popGesture: 'hide'
+					},
 					preload:true
 				})
 			},false);
-		})
 		
+		var toFindPw=document.getElementById('toFindPw');
+			toFindPw.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'toFindPw.html',
+					show:{
+						anishow:'pop-in'
+					},
+					styles: {
+								popGesture: 'hide'
+					},
+					preload:true
+				})
+			},false);
+		});
 	</script>
 </body>
 </html>
