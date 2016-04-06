@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
-    <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
-    <script type="text/javascript" charset="UTF-8">
-      	mui.init();
-    </script>
+
 </head>
 <body>
 	<header class="mui-bar-nav mui-bar head-top">
@@ -56,7 +53,7 @@
 					<h5>驾驶证号：3727XXXXXXXX8372</h5>
 				</div>
 				<div class="mui-col-xs-2">
-					<button class="mui-btn info-btn">点击认证</button>
+					<button class="mui-btn info-btn" id="toIdentify">点击认证</button>
 				</div>
 			</div>
 				</li>
@@ -106,6 +103,10 @@
 				</li>
 			</ul>
 		</div>
+	<script src="js/mui.min.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+  	mui.init();
+    </script>
 	<script type="text/javascript">
 		mui.init({
 					statusBarBackground: '#41B17C'
@@ -159,6 +160,20 @@
 					},
 					styles: {
 								popGesture: 'hide'
+					},
+					preload:true
+				})
+			},false);
+			var toIdentify = document.getElementById('toIdentify');
+			toIdentify.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'user-identify.html',
+					id:'user-identify',
+					show:{
+						anishow:'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
 					},
 					preload:true
 				})
