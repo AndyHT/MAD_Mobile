@@ -1,0 +1,26 @@
+#inback{
+	font-size: 12pt;
+}
+#back,#inback,#title{
+	color: white;
+}
+.mui-content{
+	margin-top: -10pt !important;
+}
+div>h4{
+	font-size: 10pt;
+}
+div>h5{
+	font-size: 11px;
+}
+.img-left-div{
+	background-color: yellow;
+	border: 2pt solid white;
+	border-radius: 10pt;
+}
+.img-left-ad{
+	width: 20pt;
+	height: 20pt;
+	margin-left: 7pt;
+	margin-top: 7pt;
+}

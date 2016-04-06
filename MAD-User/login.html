@@ -32,7 +32,7 @@
 			
 			<div class="login-bottom">
 				<a class="bot-left" id="tosignup">没有账号，现在注册</a>
-				<a class="bot-right" id="toindex">忘记密码</a>
+				<a class="bot-right" id="toFindPw">忘记密码</a>
 			</div>
 			<div class="block">
 				
@@ -75,7 +75,17 @@
 				})
 			},false);
 		})
-		
+		var toFindPw=document.getElementById('toFindPw');
+			toFindPw.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'toFindPw.html',
+					show:{
+						anishow:'pop-in'
+					},
+					preload:true
+				})
+			},false);
+		})
 	</script>
 </body>
 </html>
