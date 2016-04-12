@@ -1,105 +1,105 @@
 {
-	"index.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"ad-center.html",
-			"signup.html",
-			"login.html"
-		]
-	},
-	"ad-center.html": {
-		"resources": [
-			"img/user/已接广告icon.png",
-			"img/user/昵称.png",
-			"img/user/annotation.png",
-			"img/user/收益统计icon.png",
-			"img/user/主页selected.png",
-			"css/gjq_usercenter.css",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"profit.html"
-		]
-	},
-	"profit.html": {
-		"resources": [
-			"img/user/主页icon.png",
-			"js/echarts.min.js",
-			"img/user/收益统计selected.png",
-			"css/gjq_adused.css",
-			"img/user/已接广告icon.png",
-			"img/user/昵称.png",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"user-center.html",
-			"ad-used.html"
-		]
-	},
-	"user-center.html": {
-		"resources": [
-			"img/user/密码.png",
-			"img/user/个人中心selected.png",
-			"fonts/mui.ttf",
-			"img/user/收益统计icon.png",
-			"img/user/icon.png",
-			"css/gjq_usercenter.css",
-			"img/user/已接广告icon.png",
-			"img/user/主页icon.png",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"ad-used.html",
-			"index.html"
-		]
-	},
-	"ad-used.html": {
-		"resources": [
-			"img/user/已接广告selected.png",
-			"css/gjq_adused.css",
-			"img/user/主页icon.png",
-			"img/user/昵称.png",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"img/user/已下架icon.png",
-			"img/user/收益统计icon.png",
-			"img/user/可播放icon.png",
-			"img/user/已接广告icon.png"
-		]
-	},
-	"signup.html": {
-		"resources": [
-			"img/user/手机号.png",
-			"css/gjq_login.css",
-			"js/mui.enterfocus.js",
-			"img/user/昵称.png",
-			"img/user/密码.png",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"img/user/icon.png"
-		],
-		"refer": [
-			"login.html"
-		]
-	},
-	"login.html": {
-		"resources": [
-			"img/user/手机号.png",
-			"css/gjq_login.css",
-			"img/user/密码.png",
-			"img/user/icon.png",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"signup.html",
-			"index.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "ad-center.html",
+      "signup.html",
+      "login.html"
+    ]
+  },
+  "ad-center.html": {
+    "resources": [
+      "img/user/�Jicon.png",
+      "img/user/5�.png",
+      "img/user/annotation.png",
+      "img/user/6�ߡicon.png",
+      "img/user/;uselected.png",
+      "css/gjq_usercenter.css",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "profit.html"
+    ]
+  },
+  "profit.html": {
+    "resources": [
+      "img/user/;uicon.png",
+      "js/echarts.min.js",
+      "img/user/6�ߡselected.png",
+      "css/gjq_adused.css",
+      "img/user/�Jicon.png",
+      "img/user/5�.png",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "user-center.html",
+      "ad-used.html"
+    ]
+  },
+  "user-center.html": {
+    "resources": [
+      "img/user/�.png",
+      "img/user/*�-�selected.png",
+      "fonts/mui.ttf",
+      "img/user/6�ߡicon.png",
+      "img/user/icon.png",
+      "css/gjq_usercenter.css",
+      "img/user/�Jicon.png",
+      "img/user/;uicon.png",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "ad-used.html",
+      "index.html"
+    ]
+  },
+  "ad-used.html": {
+    "resources": [
+      "img/user/�Jselected.png",
+      "css/gjq_adused.css",
+      "img/user/;uicon.png",
+      "img/user/5�.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "img/user/��icon.png",
+      "img/user/6�ߡicon.png",
+      "img/user/�>icon.png",
+      "img/user/�Jicon.png"
+    ]
+  },
+  "signup.html": {
+    "resources": [
+      "img/user/K:�.png",
+      "css/gjq_login.css",
+      "js/mui.enterfocus.js",
+      "img/user/5�.png",
+      "img/user/�.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "img/user/icon.png"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "img/user/K:�.png",
+      "css/gjq_login.css",
+      "img/user/�.png",
+      "img/user/icon.png",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "signup.html",
+      "index.html"
+    ]
+  }
 }

@@ -12,7 +12,7 @@
     </script>
 </head>
 <body>
-	<div class="mui-container-fluid container">
+	<div class="mui-container-fluid container" id="container">
 		<center><img class="icon" src="img/user/icon.png"/></center>
 		<center><a class="move-ad">移动的广告MAD</a></center>
 		<!--<div class="mui-content inputs">-->
@@ -25,11 +25,11 @@
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="手机号"/>
 			</div>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/密码.png"/><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/注册密码.png"/><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="密码"/>
 			</div>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/密码.png"/ width="20%" ><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/注册密码.png"/ width="20%" ><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="确认密码"/>
 			</div>
 			
@@ -41,31 +41,27 @@
 			<div class="login-bottom">
 				<center><a id="tologin">已有账号？现在登录</a></center>
 			</div>
-			<div class="block">
-				
-			</div>
-		<!--</div>-->
+
 	</div>
 	<script src="js/mui.enterfocus.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		mui.init({
-					statusBarBackground: '#41B17C'
-				});
+		document.getElementById('container').style.height=document.documentElement.clientHeight+"px";
+		mui.init();
 		mui.plusReady(function(){
 			var tologin=document.getElementById('tologin');
 		tologin.addEventListener('tap',function(event){
-			mui.openWindow({
-				url:'login.html',
-				preload:true,
-				show:{
-					anishow:'pop-in'
-				},
-				styles: {
-								popGesture: 'hide'
-					}
-			})
+//			mui.openWindow({
+//				url:'login.html',
+//				preload:true,
+//				show:{
+//					anishow:'pop-in'
+//				},
+//				styles: {
+//								popGesture: 'hide'
+//					}
+//			})
+			mui.back();
 		},false);
-		
 		})
 		
 	</script>
