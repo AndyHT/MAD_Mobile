@@ -79,40 +79,38 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		mui.init({
-					statusBarBackground: '#41B17C'
-				});
+		mui.init();
 		mui.plusReady(function(){
-			var toadused=document.getElementById('toadused');
-			toadused.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'ad-used.html',
-					show:{
-						anishow:'pop-in'
-					},
-					preload:true
-				})
-			},false);
-			var toadcenter=document.getElementById('toadcenter');
-			toadcenter.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'ad-center.html',
-					show:{
-						anishow:'pop-in'
-					},
-					preload:true
-				})
-			},false);
-			var toadcenter=document.getElementById('tousercenter');
-			toadcenter.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'user-center.html',
-					show:{
-						anishow:'pop-in'
-					},
-					preload:true
-				})
-			},false);
+//			var toadused=document.getElementById('toadused');
+//			toadused.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'ad-used.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toadcenter=document.getElementById('toadcenter');
+//			toadcenter.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'ad-center.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toadcenter=document.getElementById('tousercenter');
+//			toadcenter.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'user-center.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					preload:true
+//				})
+//			},false);
 		})
 	</script>
 	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>

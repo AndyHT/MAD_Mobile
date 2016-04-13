@@ -9,11 +9,11 @@
 
 </head>
 <body>
-	<header class="mui-bar-nav mui-bar head-top">
+	<!--<header class="mui-bar-nav mui-bar head-top">-->
 		<!--<a class="mui-btn mui-btn-link mui-pull-left">筛选</a>-->
-		<h1 class="mui-title white-text">个人中心</h1>
+		<!--<h1 class="mui-title white-text">个人中心</h1>
 		<a class="mui-btn mui-btn-link mui-pull-right white-text" id="toindex"> 修改</a>
-	</header>
+	</header>-->
 	<!--<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active" id="toadcenter">
 				<div class="bar-img">
@@ -41,28 +41,35 @@
 			</a>
 		</nav>-->
 		<div class="mui-content">
-			
-			<ul class="mui-table-view">
+			<ul class="mui-table-view" style="margin-top: 0 !important;">
 				<li class="mui-table-view-cell">
 					<div class="mui-row">
-				<div class="mui-col-xs-2">
-					<img class="img-left" src="img/user/个人中心selected.png"/>
-				</div>
-				<div class="mui-col-xs-8">
-					<h5 class="h5-big">霍滕</h5>
-					<h5>驾驶证号：3727XXXXXXXX8372</h5>
-				</div>
-				<div class="mui-col-xs-2">
-					<button class="mui-btn info-btn" id="toIdentify">点击认证</button>
-				</div>
-			</div>
+						<div class="mui-col-xs-2">
+							<img class="img-left" src="img/user/个人中心selected.png"/>
+						</div>
+						<div class="mui-col-xs-8">
+							<h5 class="h5-big">霍滕</h5>
+							<h5>驾驶证号：3727XXXXXXXX8372</h5>
+						</div>
+						<div class="mui-col-xs-2">
+							<button class="mui-btn info-btn" id="toIdentify">点击认证</button>
+						</div>
+					</div>
 				</li>
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right mui-row">
 						<span class="mui-col-xs-1">
-							<img class="allimg" src="img/user/密码.png"/>
+							<img class="allimg" src="img/user/注册密码.png"/>
 						</span>
 						<h5 class="mui-col-xs-10 h4-big">修改密码</h5>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="ad-filter-setting" class="mui-navigate-right mui-row">
+						<span class="mui-col-xs-1">
+							<img class="allimg" src="img/user/注册密码.png"/>
+						</span>
+						<h5 class="mui-col-xs-10 h4-big">过滤设置</h5>
 					</a>
 				</li>
 			</ul>
@@ -108,60 +115,72 @@
   	mui.init();
     </script>
 	<script type="text/javascript">
-		mui.init({
-					statusBarBackground: '#41B17C'
-				});
+		mui.init();
 		mui.plusReady(function(){
-			var toadused=document.getElementById('toprofit');
-			toadused.addEventListener('tap',function(){
+
+//			var toadused=document.getElementById('toprofit');
+//			toadused.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'profit.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toadcenter=document.getElementById('toadcenter');
+//			toadcenter.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'ad-center.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toadcenter=document.getElementById('toadused');
+//			toadcenter.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'ad-used.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toindex=document.getElementById('toindex');
+//			toindex.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'index.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
+			var toIdentify = document.getElementById('ad-filter-setting');
+			toIdentify.addEventListener('tap',function(){
 				mui.openWindow({
-					url:'profit.html',
+					url:'ad-filter.html',
+					id:'ad-filter',
 					show:{
 						anishow:'pop-in'
 					},
 					styles: {
-								popGesture: 'hide'
+						popGesture: 'close'
 					},
-					preload:true
-				})
-			},false);
-			var toadcenter=document.getElementById('toadcenter');
-			toadcenter.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'ad-center.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
-				})
-			},false);
-			var toadcenter=document.getElementById('toadused');
-			toadcenter.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'ad-used.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
-				})
-			},false);
-			var toindex=document.getElementById('toindex');
-			toindex.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'index.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
 				})
 			},false);
 			var toIdentify = document.getElementById('toIdentify');

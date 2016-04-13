@@ -13,35 +13,35 @@
 </head>
 <body>
 	<header class="mui-bar-nav mui-bar head-top">
-		<a class="mui-btn mui-btn-link mui-pull-left white-text">筛选</a>
-		<h1 id="title" class="mui-title white-text">广告中心</h1>
+		<!--<a class="mui-btn mui-btn-link mui-pull-left white-text">筛选</a>-->
+		<h1 id="title" class="mui-title white-text">已接广告</h1>
 		<a class="mui-btn mui-btn-link mui-pull-right white-text" id="toInfoList"> 消息</a>
 	</header>
 	<nav class="mui-bar mui-bar-tab">
-		<a id="defaultTab" class="mui-tab-item" href="ad-list.html">
+		<!--<a id="defaultTab" class="mui-tab-item" href="ad-list.html">
 			<span class="mui-icon"><img class="navi-bar-icon" style="margin-left: -2pt;"  src="img/user/主页selected.png"/></span>
 			<span class="mui-tab-label green-word">广告中心</span>
-		</a>
+		</a>-->
 		<a class="mui-tab-item" href="ad-used.html">
-			<span class="mui-icon"><img class="navi-bar-icon" style="margin-left: -2pt;" src="img/user/已接广告icon.png"/></span>
-			<span class="mui-tab-label">已接广告</span>
+			<span class="mui-icon"><img class="navi-bar-icon" style="margin-left: -4pt;" src="img/user/已接广告selected.png"/></span>
+			<span class="mui-tab-label green-word">已接广告</span>
 		</a>
 		<a class="mui-tab-item" href="profit.html">
 			<span class="mui-icon">
-				<img class="navi-bar-icon" style="margin-left: -1pt;" src="img/user/收益统计icon.png"/>
+				<img class="navi-bar-icon" style="margin-left: -2pt;" src="img/user/收益统计icon.png"/>
 			</span>
 			<span class="mui-tab-label">收益统计</span>
 		</a>
 		<a class="mui-tab-item" href="user-center.html">
 			<span class="mui-icon">
-				<img class="navi-bar-icon" style="margin-left: -1pt;" src="img/user/个人中心icon.png"/>
+				<img class="navi-bar-icon" style="margin-left: -3pt;" src="img/user/个人中心icon.png"/>
 			</span>
 			<span class="mui-tab-label">个人中心</span>
 		</a>
 	</nav>
 	<script type="text/javascript">
-		mui.init(/*{statusBarBackground: '#41B17C'}*/);
-		var subpages = ['ad-list.html', 'ad-used.html','profit.html','user-center.html'];
+		mui.init();
+		var subpages = ['ad-used.html','profit.html','user-center.html'];
 		var subpage_style = {
 			top: '45px',
 			bottom: '51px'
@@ -50,7 +50,7 @@
 		//创建子页面，首个选项卡页面显示，其它均隐藏；
 		mui.plusReady(function(){
 			var self = plus.webview.currentWebview();
-				for (var i = 0; i < 4; i++) {
+				for (var i = 0; i < 3; i++) {
 					var temp = {};
 					var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
 					if (i > 0) {
@@ -89,58 +89,58 @@
 				activeTab = targetTab;
 			});
 			
-			var toadused=document.getElementById('toprofit');
-			toadused.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'profit.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
-				})
-			},false);
-			var toadcenter=document.getElementById('tousercenter');
-			toadcenter.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'user-center.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
-				})
-			},false);
-			var toadcenter=document.getElementById('toadused');
-			toadcenter.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'ad-used.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
-				})
-			},false);
-			var toaddetail=document.getElementById('toaddetail');
-			toaddetail.addEventListener('tap',function(){
-				mui.openWindow({
-					url:'detail.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'hide'
-					},
-					preload:true
-				})
-			},false);
+//			var toadused=document.getElementById('toprofit');
+//			toadused.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'profit.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toadcenter=document.getElementById('tousercenter');
+//			toadcenter.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'user-center.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toadcenter=document.getElementById('toadused');
+//			toadcenter.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'ad-used.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
+//			var toaddetail=document.getElementById('toaddetail');
+//			toaddetail.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'detail.html',
+//					show:{
+//						anishow:'pop-in'
+//					},
+//					styles: {
+//								popGesture: 'hide'
+//					},
+//					preload:true
+//				})
+//			},false);
 			var toInfoList=document.getElementById('toInfoList');
 			toInfoList.addEventListener('tap',function(){
 				mui.openWindow({
