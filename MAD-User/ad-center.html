@@ -17,23 +17,26 @@
 		<a class="mui-btn mui-btn-link mui-pull-right white-text" id="toInfoList"> 消息</a>
 	</header>
 	<nav class="mui-bar mui-bar-tab">
-		<a class="mui-tab-item" href="ad-used.html">
-			<span class="mui-icon"><img class="navi-bar-icon" style="margin-left: -4pt;" src="img/user/已接广告selected.png"/></span>
-			<span class="mui-tab-label green-word">已接广告</span>
-		</a>
-		<a class="mui-tab-item" href="profit.html">
+		<a id="adUsed" class="mui-tab-item" href="ad-used.html">
 			<span class="mui-icon">
-				<img class="navi-bar-icon" style="margin-left: -2pt;" src="img/user/收益统计icon.png"/>
+				<img id="adUsedImg" class="navi-bar-icon" style="margin-left: -4pt;" src="img/user/已接广告selected.png"/>
 			</span>
-			<span class="mui-tab-label">收益统计</span>
+			<span id="adUsedText" class="mui-tab-label green-word">已接广告</span>
 		</a>
-		<a class="mui-tab-item" href="user-center.html">
+		<a id="profit" class="mui-tab-item" href="profit.html">
 			<span class="mui-icon">
-				<img class="navi-bar-icon" style="margin-left: -3pt;" src="img/user/个人中心icon.png"/>
+				<img id="profitImg" class="navi-bar-icon" style="margin-left: -2pt;" src="img/user/收益统计icon.png"/>
 			</span>
-			<span class="mui-tab-label">个人中心</span>
+			<span id="profitText" class="mui-tab-label">收益统计</span>
+		</a>
+		<a id="userCenter" class="mui-tab-item" href="user-center.html">
+			<span class="mui-icon">
+				<img id="userCenterImg" class="navi-bar-icon" style="margin-left: -3pt;" src="img/user/个人中心icon.png"/>
+			</span>
+			<span id="userCenterText" class="mui-tab-label">个人中心</span>
 		</a>
 	</nav>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript">
 		mui.init();
 		var subpages = ['ad-used.html','profit.html','user-center.html'];
@@ -59,8 +62,85 @@
 			//当前激活选项
 			var activeTab = subpages[0];
 			var title = document.getElementById("title");
+			
+			//************************//
+			var oldtgtID = 'adUsed';
+			var oldIMG = document.getElementById('adUsedImg');
+			var oldText = document.getElementById('adUsedText');
+			//************************//
+			
+			
 			//选项卡点击事件
 			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var tgtID = this.getAttribute('id');
+				switch (tgtID)
+				{
+					case "profit":
+						if(oldtgtID == "profit") break;
+						else
+						{
+							document.getElementById('profitImg').src = "img/user/收益统计selected.png";
+							document.getElementById('profitText').className += " green-word";
+							if(oldtgtID == "adUsed")
+							{
+								oldIMG.src = "img/user/已接广告icon.png";
+							}
+							else if(oldtgtID == "userCenter")
+							{
+								oldIMG.src = "img/user/个人中心icon.png";
+							}
+							oldText.className = "mui-tab-label";
+							oldtgtID = "profit";
+							oldIMG = document.getElementById('profitImg');
+							oldText = document.getElementById('profitText');
+						}
+						break;
+					case "userCenter":
+						if(oldtgtID == "userCenter") break;
+						else
+						{
+							document.getElementById('userCenterImg').src = "img/user/个人中心selected.png";
+							document.getElementById('userCenterText').className += " green-word";
+							if(oldtgtID == "adUsed")
+							{
+								oldIMG.src = "img/user/已接广告icon.png";
+							}
+							else if(oldtgtID == "profit")
+							{
+								oldIMG.src = "img/user/收益统计icon.png";
+							}
+							oldText.className = "mui-tab-label";
+							oldtgtID = "userCenter";
+							oldIMG = document.getElementById('userCenterImg');
+							oldText = document.getElementById('userCenterText');
+						}
+						break;
+					case "adUsed":
+						if(oldtgtID == "adUsed") break;
+						else
+						{
+							document.getElementById('adUsedImg').src = "img/user/已接广告selected.png";
+							document.getElementById('adUsedText').className += " green-word";
+							if(oldtgtID == "profit")
+							{
+								oldIMG.src = "img/user/收益统计icon.png";
+							}
+							else if(oldtgtID == "userCenter")
+							{
+								oldIMG.src = "img/user/个人中心icon.png";
+							}
+							oldText.className = "mui-tab-label";
+							oldtgtID = "adUsed";
+							oldIMG = document.getElementById('adUsedImg');
+							oldText = document.getElementById('adUsedText');
+						}
+						break;
+					default:
+						console.log('err:'+tgtID);
+						break;
+				}
+				
+				
 				var targetTab = this.getAttribute('href');
 				if (targetTab == activeTab) {
 					return;
@@ -82,6 +162,7 @@
 				plus.webview.hide(activeTab);
 				//更改当前活跃的选项卡
 				activeTab = targetTab;
+				
 			});
 			var toInfoList=document.getElementById('toInfoList');
 			toInfoList.addEventListener('tap',function(){
