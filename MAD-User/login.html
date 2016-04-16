@@ -12,13 +12,10 @@
 	<div class="mui-container-fluid container" id="container">
 		<center><img class="icon" src="img/user/icon.png"/></center>
 		<center><a class="move-ad">移动的广告MAD</a></center>
-		<!--<div class="mui-content inputs">-->
 			<div class="mui-input-row login">
 				<label><img class="input-img" src="img/user/手机号.png"/><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="登录手机号"/>
 			</div>
-			
-			
 			<div class="mui-input-row login">
 				<label><img class="input-img" src="img/user/登录密码.png" /><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="密码"/>
@@ -31,10 +28,6 @@
 				<a class="bot-left" id="tosignup">没有账号，现在注册</a>
 				<a class="bot-right" id="toFindPw">忘记密码</a>
 			</div>
-			<!--<div class="block">
-				
-			</div>-->
-		<!--</div>-->
 	</div>
 	<script type="text/javascript">
 		document.getElementById('container').style.height=document.documentElement.clientHeight+"px";
@@ -68,30 +61,10 @@
 		mui.plusReady(function(){
 			var tosignup=document.getElementById('tosignup');
 			tosignup.addEventListener('tap',function(event){
-//			mui.openWindow({
-//				url:'signup.html',
-//				preload:true,
-//				show:{
-//					anishow:'pop-in'
-//				},
-//				styles: {
-//								popGesture: 'close'
-//				},
-//			});
-//			mui.openWindow(plus.webview.getWebviewById("signup"));
 			plus.webview.show('signup','pop-in');
 		},false);
 		var toadcenter=document.getElementById('toadcenter');
 			toadcenter.addEventListener('tap',function(){
-//				mui.openWindow({
-//					url:'ad-center.html',
-//					show:{
-//						anishow:'pop-in'
-//					},
-//					styles: {
-//								popGesture: 'none'
-//					},
-//				})
 			plus.webview.show("ad-center","pop-in");
 			plus.navigator.setStatusBarBackground("#41B17C");
 			plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
@@ -99,15 +72,6 @@
 		
 		var toFindPw=document.getElementById('toFindPw');
 			toFindPw.addEventListener('tap',function(){
-//				mui.openWindow({
-//					url:'toFindPw.html',
-//					show:{
-//						anishow:'pop-in'
-//					},
-//					styles: {
-//								popGesture: 'none'
-//					},
-//				});
 				plus.webview.show("toFindPW","pop-in");
 				plus.navigator.setStatusBarBackground("#41B17C");
 				plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );

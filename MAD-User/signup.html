@@ -15,7 +15,6 @@
 	<div class="mui-container-fluid container" id="container">
 		<center><img class="icon" src="img/user/icon.png"/></center>
 		<center><a class="move-ad">移动的广告MAD</a></center>
-		<!--<div class="mui-content inputs">-->
 			<div class="mui-input-row login">
 				<label><img class="input-img" src="img/user/昵称.png"/><a class="input-a">:</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" placeholder="昵称"/>
@@ -50,16 +49,6 @@
 		mui.plusReady(function(){
 			var tologin=document.getElementById('tologin');
 		tologin.addEventListener('tap',function(event){
-//			mui.openWindow({
-//				url:'login.html',
-//				preload:true,
-//				show:{
-//					anishow:'pop-in'
-//				},
-//				styles: {
-//								popGesture: 'hide'
-//					}
-//			})
 			mui.back();
 		},false);
 		})

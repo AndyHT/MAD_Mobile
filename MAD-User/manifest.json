@@ -191,126 +191,217 @@
 		}
 	},
 	"dependencies": {
-		"pages": {
-			"index.html": {
-				"resources": [
-					"js/mui.min.js",
-					"css/mui.min.css"
-				],
-				"refer": [
-					"ad-center.html",
-					"signup.html",
-					"login.html"
-				],
-				"priority": 0
-			},
-			"ad-center.html": {
-				"resources": [
-					"img/user/已接广告icon.png",
-					"img/user/昵称.png",
-					"img/user/annotation.png",
-					"img/user/收益统计icon.png",
-					"img/user/主页selected.png",
-					"css/gjq_usercenter.css",
-					"js/mui.min.js",
-					"css/mui.min.css"
-				],
-				"refer": [
-					"profit.html"
-				],
-				"priority": 0
-			},
-			"profit.html": {
-				"resources": [
-					"img/user/主页icon.png",
-					"js/echarts.min.js",
-					"img/user/收益统计selected.png",
-					"css/gjq_adused.css",
-					"img/user/已接广告icon.png",
-					"img/user/昵称.png",
-					"js/mui.min.js",
-					"css/mui.min.css"
-				],
-				"refer": [
-					"user-center.html",
-					"ad-used.html"
-				],
-				"priority": 0
-			},
-			"user-center.html": {
-				"resources": [
-					"img/user/密码.png",
-					"img/user/个人中心selected.png",
-					"fonts/mui.ttf",
-					"img/user/收益统计icon.png",
-					"img/user/icon.png",
-					"css/gjq_usercenter.css",
-					"img/user/已接广告icon.png",
-					"img/user/主页icon.png",
-					"js/mui.min.js",
-					"css/mui.min.css"
-				],
-				"refer": [
-					"ad-used.html",
-					"index.html"
-				],
-				"priority": 0
-			},
-			"ad-used.html": {
-				"resources": [
-					"img/user/已接广告selected.png",
-					"css/gjq_adused.css",
-					"img/user/主页icon.png",
-					"img/user/昵称.png",
-					"js/mui.min.js",
-					"css/mui.min.css",
-					"img/user/已下架icon.png",
-					"img/user/收益统计icon.png",
-					"img/user/可播放icon.png",
-					"img/user/已接广告icon.png"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"signup.html": {
-				"resources": [
-					"img/user/手机号.png",
-					"css/gjq_login.css",
-					"js/mui.enterfocus.js",
-					"img/user/昵称.png",
-					"img/user/密码.png",
-					"js/mui.min.js",
-					"css/mui.min.css",
-					"img/user/icon.png"
-				],
-				"refer": [
-					"login.html"
-				],
-				"priority": 0
-			},
-			"login.html": {
-				"resources": [
-					"img/user/手机号.png",
-					"css/gjq_login.css",
-					"img/user/密码.png",
-					"img/user/icon.png",
-					"js/mui.min.js",
-					"css/mui.min.css"
-				],
-				"refer": [
-					"signup.html",
-					"index.html"
-				],
-				"priority": 0
-			}
-		},
-		"idle": {
-			"resources": [
-				"css/mui.css",
-				"log-mb.html",
-				"bower.json",
-				"js/mui.js"
-			]
-		}
+	  "pages": {
+	    "index.html": {
+	      "resources": [
+	        "js/mui.min.js",
+	        "css/mui.min.css"
+	      ],
+	      "refer": [
+	        "ad-center.html",
+	        "signup.html",
+	        "login.html"
+	      ],
+	      "priority": 0
+	    },
+	    "ad-center.html": {
+	      "resources": [
+	        "img/user/已接广告icon.png",
+	        "img/user/昵称.png",
+	        "img/user/annotation.png",
+	        "img/user/收益统计icon.png",
+	        "img/user/主页selected.png",
+	        "css/gjq_usercenter.css",
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "css/zjy_Center.css",
+	        "img/user/已接广告selected.png",
+	        "img/user/个人中心icon.png"
+	      ],
+	      "refer": [
+	        "profit.html",
+	        "user-center.html",
+	        "info-list.html",
+	        "ad-used.html"
+	      ],
+	      "priority": 0
+	    },
+	    "profit.html": {
+	      "resources": [
+	        "img/user/主页icon.png",
+	        "js/echarts.min.js",
+	        "img/user/收益统计selected.png",
+	        "css/gjq_adused.css",
+	        "img/user/已接广告icon.png",
+	        "img/user/昵称.png",
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf"
+	      ],
+	      "refer": [
+	        "user-center.html",
+	        "ad-used.html"
+	      ],
+	      "priority": 0
+	    },
+	    "user-center.html": {
+	      "resources": [
+	        "img/user/密码.png",
+	        "img/user/个人中心selected.png",
+	        "fonts/mui.ttf",
+	        "img/user/收益统计icon.png",
+	        "img/user/icon.png",
+	        "css/gjq_usercenter.css",
+	        "img/user/已接广告icon.png",
+	        "img/user/主页icon.png",
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "img/user/注册密码.png"
+	      ],
+	      "refer": [
+	        "ad-used.html",
+	        "index.html",
+	        "ad-filter.html",
+	        "user-identify.html"
+	      ],
+	      "priority": 0
+	    },
+	    "ad-used.html": {
+	      "resources": [
+	        "img/user/已接广告selected.png",
+	        "css/gjq_adused.css",
+	        "img/user/主页icon.png",
+	        "img/user/昵称.png",
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "img/user/已下架icon.png",
+	        "img/user/收益统计icon.png",
+	        "img/user/可播放icon.png",
+	        "img/user/已接广告icon.png",
+	        "fonts/mui.ttf",
+	        "css/gjq_usercenter.css"
+	      ],
+	      "refer": [],
+	      "priority": 0
+	    },
+	    "signup.html": {
+	      "resources": [
+	        "img/user/手机号.png",
+	        "css/gjq_login.css",
+	        "js/mui.enterfocus.js",
+	        "img/user/昵称.png",
+	        "img/user/密码.png",
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "img/user/icon.png",
+	        "fonts/mui.ttf",
+	        "img/user/注册密码.png"
+	      ],
+	      "refer": [
+	        "login.html"
+	      ],
+	      "priority": 0
+	    },
+	    "login.html": {
+	      "resources": [
+	        "img/user/手机号.png",
+	        "css/gjq_login.css",
+	        "img/user/密码.png",
+	        "img/user/icon.png",
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "img/user/登录密码.png"
+	      ],
+	      "refer": [
+	        "signup.html",
+	        "index.html",
+	        "toFindPw.html",
+	        "ad-center.html"
+	      ],
+	      "priority": 0
+	    },
+	    "toFindPw.html": {
+	      "href": "toFindPw.html",
+	      "resources": [
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "css/gjq_usercenter.css",
+	        "css/confirm-order.css",
+	        "css/gjq_toFindPw.css",
+	        "img/user/yep.png"
+	      ],
+	      "priority": 0
+	    },
+	    "ad-filter.html": {
+	      "href": "ad-filter.html",
+	      "resources": [
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "css/gjq_usercenter.css",
+	        "css/info-list.css",
+	        "css/filterPage.css",
+	        "js/mui.min.js",
+	        "img/user/影视娱乐.png",
+	        "img/user/教育类.png",
+	        "img/user/服务.png",
+	        "img/user/招聘.png",
+	        "img/user/社交.png",
+	        "img/user/食宿.png",
+	        "img/user/租赁.png",
+	        "img/user/商品.png",
+	        "img/user/其他.png"
+	      ],
+	      "priority": 1
+	    },
+	    "user-identify.html": {
+	      "href": "user-identify.html",
+	      "resources": [
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "css/gjq_usercenter.css",
+	        "css/zjy_userIdentify.css",
+	        "js/mui.min.js",
+	        "img/user/行驶证图片.png",
+	        "img/user/车辆正面图片.png"
+	      ],
+	      "priority": 2
+	    },
+	    "info-list.html": {
+	      "href": "info-list.html",
+	      "resources": [
+	        "js/mui.min.js",
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "css/gjq_usercenter.css",
+	        "css/info-list.css"
+	      ],
+	      "priority": 3
+	    }
+	  },
+	  "idle": {
+	    "resources": [
+	      "img/user/gg.jpg",
+	      "img/user/Oval 140.png",
+	      "detail.html",
+	      "img/user/detail-annotation.png",
+	      "img/user/validate-right.png",
+	      "img/user/车 icon.png",
+	      "css/mui.css",
+	      "img/user/Group.png",
+	      "img/user/validate-wrong.png",
+	      "img/user/Oval 1402.png",
+	      "img/user/hh.jpg",
+	      "css/gjq_detail.css",
+	      "bower.json",
+	      "confirm-order.html",
+	      "ad-list.html",
+	      "img/user/apple.jpg",
+	      "img/user/Group 2.png",
+	      "js/mui.js"
+	    ]
+	  }
 	},"fullscreen":false
 }
