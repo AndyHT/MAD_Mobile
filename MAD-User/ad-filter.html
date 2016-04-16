@@ -179,8 +179,21 @@
 <script src="js/mui.min.js"></script>
 <script type="text/javascript" charset="UTF-8">
   	mui.init();
+  	mui('.mui-content').on('tap','.oval140',function(){
+  		if(this.src == "http://127.0.0.1:8020/MAD-User/img/user/Oval%20140.png")
+  		{
+//			console.log('active2inActive');
+  			this.src="img/user/Oval 1402.png";
+  		}
+  		else
+  		{
+//			console.log("inActive2active");
+  			this.src="img/user/Oval 140.png";
+  		}
+  	});
+  	console.log(mui('.mui-table-view-cell'));
+  	mui('.mui-table-view-cell').off()
   	mui.plusReady(function(){
-  		
   	});
 </script>	
 </body>

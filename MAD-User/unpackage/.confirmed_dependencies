@@ -1,184 +1,197 @@
 {
-  "index.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "ad-center.html",
-      "signup.html",
-      "login.html"
-    ]
-  },
-  "ad-center.html": {
-    "resources": [
-      "img/user/ıJicon.png",
-      "img/user/5ı.png",
-      "img/user/annotation.png",
-      "img/user/6ıáicon.png",
-      "img/user/;uselected.png",
-      "css/gjq_usercenter.css",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/zjy_Center.css",
-      "img/user/ò¥Jselected.png",
-      "img/user/6Êß¡icon.png",
-      "img/user/*º-Ãicon.png"
-    ],
-    "refer": [
-      "profit.html",
-      "user-center.html",
-      "info-list.html",
-      "ad-used.html"
-    ]
-  },
-  "profit.html": {
-    "resources": [
-      "img/user/;uicon.png",
-      "js/echarts.min.js",
-      "img/user/6ıáselected.png",
-      "css/gjq_adused.css",
-      "img/user/ıJicon.png",
-      "img/user/5ı.png",
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "user-center.html",
-      "ad-used.html"
-    ]
-  },
-  "user-center.html": {
-    "resources": [
-      "img/user/ı\u0001.png",
-      "img/user/*ı-ıselected.png",
-      "fonts/mui.ttf",
-      "img/user/6ıáicon.png",
-      "img/user/icon.png",
-      "css/gjq_usercenter.css",
-      "img/user/ıJicon.png",
-      "img/user/;uicon.png",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "img/user/*º-Ãselected.png",
-      "img/user/èŒÆ.png"
-    ],
-    "refer": [
-      "ad-used.html",
-      "index.html",
-      "ad-filter.html",
-      "user-identify.html"
-    ]
-  },
-  "ad-used.html": {
-    "resources": [
-      "img/user/ıJselected.png",
-      "css/gjq_adused.css",
-      "img/user/;uicon.png",
-      "img/user/5ı.png",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "img/user/ı\u000bıicon.png",
-      "img/user/6ıáicon.png",
-      "img/user/ı\u003eicon.png",
-      "img/user/ıJicon.png",
-      "css/gjq_usercenter.css",
-      "img/user/ò¥Jicon.png"
-    ],
-    "refer": []
-  },
-  "signup.html": {
-    "resources": [
-      "img/user/K:ı.png",
-      "css/gjq_login.css",
-      "js/mui.enterfocus.js",
-      "img/user/5ı.png",
-      "img/user/ı\u0001.png",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "img/user/icon.png",
-      "img/user/5ğ.png",
-      "img/user/K:÷.png",
-      "img/user/èŒÆ.png"
-    ],
-    "refer": [
-      "login.html"
-    ]
-  },
-  "login.html": {
-    "resources": [
-      "img/user/K:ı.png",
-      "css/gjq_login.css",
-      "img/user/ı\u0001.png",
-      "img/user/icon.png",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "img/user/K:÷.png",
-      "img/user/{UÆ.png"
-    ],
-    "refer": [
-      "signup.html",
-      "index.html",
-      "toFindPw.html",
-      "ad-center.html"
-    ]
-  },
-  "toFindPw.html": {
-    "href": "toFindPw.html",
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/gjq_usercenter.css",
-      "css/confirm-order.css",
-      "css/gjq_toFindPw.css",
-      "img/user/yep.png"
-    ],
-    "refer": [],
-    "priority": 0
-  },
-  "ad-filter.html": {
-    "href": "ad-filter.html",
-    "resources": [
-      "css/mui.min.css",
-      "css/gjq_usercenter.css",
-      "css/info-list.css",
-      "css/filterPage.css",
-      "js/mui.min.js",
-      "img/user/qÆ1P.png",
-      "img/user/Y²{.png",
-      "img/user/¡.png",
-      "img/user/ÛX.png",
-      "img/user/>¤.png",
-      "img/user/ß¿.png",
-      "img/user/ßA.png",
-      "img/user/FÁ.png",
-      "img/user/vÖ.png"
-    ],
-    "refer": [],
-    "priority": 0
-  },
-  "user-identify.html": {
-    "href": "user-identify.html",
-    "resources": [
-      "css/mui.min.css",
-      "css/gjq_usercenter.css",
-      "css/zjy_userIdentify.css",
-      "js/mui.min.js",
-      "img/user/LvÁşG.png",
-      "img/user/f†cbşG.png"
-    ],
-    "refer": [],
-    "priority": 0
-  },
-  "info-list.html": {
-    "href": "info-list.html",
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/gjq_usercenter.css",
-      "css/info-list.css"
-    ],
-    "refer": [],
-    "priority": 0
-  }
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"ad-center.html",
+			"signup.html",
+			"login.html"
+		]
+	},
+	"ad-center.html": {
+		"resources": [
+			"img/user/ï¿½Jicon.png",
+			"img/user/5ï¿½.png",
+			"img/user/annotation.png",
+			"img/user/6ï¿½ï¿½icon.png",
+			"img/user/;uselected.png",
+			"css/gjq_usercenter.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/zjy_Center.css",
+			"img/user/ï¿½Jselected.png",
+			"img/user/6ï¿½ß¡icon.png",
+			"img/user/*ï¿½-ï¿½icon.png",
+			"img/user/å·²æ¥å¹¿å‘Šselected.png",
+			"ad-used.html",
+			"fonts/mui.ttf",
+			"img/user/æ”¶ç›Šç»Ÿè®¡icon.png",
+			"img/user/ä¸ªäººä¸­å¿ƒicon.png"
+		],
+		"refer": [
+			"profit.html",
+			"user-center.html",
+			"info-list.html",
+			"ad-used.html"
+		]
+	},
+	"profit.html": {
+		"resources": [
+			"img/user/;uicon.png",
+			"js/echarts.min.js",
+			"img/user/6ï¿½ï¿½selected.png",
+			"css/gjq_adused.css",
+			"img/user/ï¿½Jicon.png",
+			"img/user/5ï¿½.png",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"user-center.html",
+			"ad-used.html"
+		]
+	},
+	"user-center.html": {
+		"resources": [
+			"img/user/ï¿½\u0001.png",
+			"img/user/*ï¿½-ï¿½selected.png",
+			"fonts/mui.ttf",
+			"img/user/6ï¿½ï¿½icon.png",
+			"img/user/icon.png",
+			"css/gjq_usercenter.css",
+			"img/user/ï¿½Jicon.png",
+			"img/user/;uicon.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"img/user/*ï¿½-ï¿½selected.png",
+			"img/user/ï¿½ï¿½\u0001.png",
+			"img/user/æ³¨å†Œå¯†ç .png",
+			"img/user/ä¸ªäººä¸­å¿ƒselected.png"
+		],
+		"refer": [
+			"ad-used.html",
+			"index.html",
+			"ad-filter.html",
+			"user-identify.html"
+		]
+	},
+	"ad-used.html": {
+		"resources": [
+			"img/user/ï¿½Jselected.png",
+			"css/gjq_adused.css",
+			"img/user/;uicon.png",
+			"img/user/5ï¿½.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"img/user/ï¿½\u000bï¿½icon.png",
+			"img/user/6ï¿½ï¿½icon.png",
+			"img/user/ï¿½\u003eicon.png",
+			"img/user/ï¿½Jicon.png",
+			"css/gjq_usercenter.css",
+			"img/user/ï¿½Jicon.png",
+			"img/user/å·²æ¥å¹¿å‘Šicon.png"
+		],
+		"refer": []
+	},
+	"signup.html": {
+		"resources": [
+			"img/user/K:ï¿½.png",
+			"css/gjq_login.css",
+			"js/mui.enterfocus.js",
+			"img/user/5ï¿½.png",
+			"img/user/ï¿½\u0001.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"img/user/icon.png",
+			"img/user/5ï¿½.png",
+			"img/user/K:ï¿½.png",
+			"img/user/ï¿½ï¿½\u0001.png",
+			"img/user/æ‰‹æœºå·.png",
+			"img/user/æ˜µç§°.png",
+			"img/user/æ³¨å†Œå¯†ç .png"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"img/user/K:ï¿½.png",
+			"css/gjq_login.css",
+			"img/user/ï¿½\u0001.png",
+			"img/user/icon.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"img/user/K:ï¿½.png",
+			"img/user/{Uï¿½\u0001.png",
+			"img/user/æ‰‹æœºå·.png",
+			"img/user/ç™»å½•å¯†ç .png"
+		],
+		"refer": [
+			"signup.html",
+			"index.html",
+			"toFindPw.html",
+			"ad-center.html"
+		]
+	},
+	"toFindPw.html": {
+		"href": "toFindPw.html",
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/gjq_usercenter.css",
+			"css/confirm-order.css",
+			"css/gjq_toFindPw.css",
+			"img/user/yep.png"
+		],
+		"refer": [],
+		"priority": 0
+	},
+	"ad-filter.html": {
+		"href": "ad-filter.html",
+		"resources": [
+			"css/mui.min.css",
+			"css/gjq_usercenter.css",
+			"css/info-list.css",
+			"css/filterPage.css",
+			"js/mui.min.js",
+			"img/user/qï¿½1P.png",
+			"img/user/Yï¿½{.png",
+			"img/user/\rï¿½.png",
+			"img/user/ï¿½X.png",
+			"img/user/\u003eï¿½.png",
+			"img/user/ß¿.png",
+			"img/user/ï¿½A.png",
+			"img/user/Fï¿½.png",
+			"img/user/vï¿½.png"
+		],
+		"refer": [],
+		"priority": 0
+	},
+	"user-identify.html": {
+		"href": "user-identify.html",
+		"resources": [
+			"css/mui.min.css",
+			"css/gjq_usercenter.css",
+			"css/zjy_userIdentify.css",
+			"js/mui.min.js",
+			"img/user/Lvï¿½ï¿½G.png",
+			"img/user/fï¿½cbï¿½G.png"
+		],
+		"refer": [],
+		"priority": 0
+	},
+	"info-list.html": {
+		"href": "info-list.html",
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/gjq_usercenter.css",
+			"css/info-list.css"
+		],
+		"refer": [],
+		"priority": 0
+	}
 }
