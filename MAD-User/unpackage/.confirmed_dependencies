@@ -22,13 +22,17 @@
 			"css/mui.min.css",
 			"css/zjy_Center.css",
 			"img/user/�Jselected.png",
-			"img/user/6�ߡicon.png",
+			"img/user/6��icon.png",
 			"img/user/*�-�icon.png",
-			"img/user/已接广告selected.png",
+			"img/user/�Jselected.png",
 			"ad-used.html",
 			"fonts/mui.ttf",
-			"img/user/收益统计icon.png",
-			"img/user/个人中心icon.png"
+			"img/user/6�ߡicon.png",
+			"img/user/*�-�icon.png",
+			"img/user/AdUsedSelected.png",
+			"img/user/UserCenterIcon.png",
+			"img/user/ProfitIcon.png",
+			"img/user/ProfitSelected.png"
 		],
 		"refer": [
 			"profit.html",
@@ -67,8 +71,9 @@
 			"css/mui.min.css",
 			"img/user/*�-�selected.png",
 			"img/user/��\u0001.png",
-			"img/user/注册密码.png",
-			"img/user/个人中心selected.png"
+			"img/user/��\u0001.png",
+			"img/user/*�-�selected.png",
+			"img/user/UserCenterSelected.png"
 		],
 		"refer": [
 			"ad-used.html",
@@ -91,7 +96,8 @@
 			"img/user/�Jicon.png",
 			"css/gjq_usercenter.css",
 			"img/user/�Jicon.png",
-			"img/user/已接广告icon.png"
+			"img/user/�Jicon.png",
+			"img/user/AdUsedIcon.png"
 		],
 		"refer": []
 	},
@@ -108,9 +114,11 @@
 			"img/user/5�.png",
 			"img/user/K:�.png",
 			"img/user/��\u0001.png",
-			"img/user/手机号.png",
-			"img/user/昵称.png",
-			"img/user/注册密码.png"
+			"img/user/K:�.png",
+			"img/user/5�.png",
+			"img/user/��\u0001.png",
+			"img/user/RegPassword.png",
+			"img/user/NiCheng.png"
 		],
 		"refer": [
 			"login.html"
@@ -126,8 +134,10 @@
 			"css/mui.min.css",
 			"img/user/K:�.png",
 			"img/user/{U�\u0001.png",
-			"img/user/手机号.png",
-			"img/user/登录密码.png"
+			"img/user/K:�.png",
+			"img/user/{U�\u0001.png",
+			"img/user/MobilePhoneNum.png",
+			"img/user/LoginPassword.png"
 		],
 		"refer": [
 			"signup.html",
@@ -144,7 +154,8 @@
 			"css/gjq_usercenter.css",
 			"css/confirm-order.css",
 			"css/gjq_toFindPw.css",
-			"img/user/yep.png"
+			"img/user/yep.png",
+			"fonts/mui.ttf"
 		],
 		"refer": [],
 		"priority": 0
@@ -162,10 +173,21 @@
 			"img/user/\r�.png",
 			"img/user/�X.png",
 			"img/user/\u003e�.png",
-			"img/user/߿.png",
+			"img/user/�.png",
 			"img/user/�A.png",
 			"img/user/F�.png",
-			"img/user/v�.png"
+			"img/user/v�.png",
+			"img/user/Oval 1402.png",
+			"img/user/ShoppingItem.png",
+			"img/user/Oval 140.png",
+			"img/user/YingShiYuLe.png",
+			"img/user/ZuLin.png",
+			"img/user/ZhaoPin.png",
+			"img/user/ShiSu.png",
+			"img/user/SheJiao.png",
+			"img/user/FuWu.png",
+			"img/user/JiaoYuLei.png",
+			"img/user/other.png"
 		],
 		"refer": [],
 		"priority": 0
@@ -178,7 +200,9 @@
 			"css/zjy_userIdentify.css",
 			"js/mui.min.js",
 			"img/user/Lv��G.png",
-			"img/user/f�cb�G.png"
+			"img/user/f�cb�G.png",
+			"img/user/CarFrontIcon.png",
+			"img/user/XingShiZhengPic.png"
 		],
 		"refer": [],
 		"priority": 0
@@ -189,7 +213,8 @@
 			"js/mui.min.js",
 			"css/mui.min.css",
 			"css/gjq_usercenter.css",
-			"css/info-list.css"
+			"css/info-list.css",
+			"img/user/Group 2.png"
 		],
 		"refer": [],
 		"priority": 0

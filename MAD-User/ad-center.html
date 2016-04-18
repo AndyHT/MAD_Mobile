@@ -19,19 +19,19 @@
 	<nav class="mui-bar mui-bar-tab">
 		<a id="adUsed" class="mui-tab-item" href="ad-used.html">
 			<span class="mui-icon">
-				<img id="adUsedImg" class="navi-bar-icon" style="margin-left: -4pt;" src="img/user/已接广告selected.png"/>
+				<img id="adUsedImg" class="navi-bar-icon" style="margin-left: -4pt;" src="img/user/AdUsedSelected.png"/>
 			</span>
 			<span id="adUsedText" class="mui-tab-label green-word">已接广告</span>
 		</a>
 		<a id="profit" class="mui-tab-item" href="profit.html">
 			<span class="mui-icon">
-				<img id="profitImg" class="navi-bar-icon" style="margin-left: -2pt;" src="img/user/收益统计icon.png"/>
+				<img id="profitImg" class="navi-bar-icon" style="margin-left: -2pt;" src="img/user/ProfitIcon.png"/>
 			</span>
 			<span id="profitText" class="mui-tab-label">收益统计</span>
 		</a>
 		<a id="userCenter" class="mui-tab-item" href="user-center.html">
 			<span class="mui-icon">
-				<img id="userCenterImg" class="navi-bar-icon" style="margin-left: -3pt;" src="img/user/个人中心icon.png"/>
+				<img id="userCenterImg" class="navi-bar-icon" style="margin-left: -3pt;" src="img/user/UserCenterIcon.png"/>
 			</span>
 			<span id="userCenterText" class="mui-tab-label">个人中心</span>
 		</a>
@@ -79,15 +79,15 @@
 						if(oldtgtID == "profit") break;
 						else
 						{
-							document.getElementById('profitImg').src = "img/user/收益统计selected.png";
+							document.getElementById('profitImg').src = "img/user/ProfitSelected.png";
 							document.getElementById('profitText').className += " green-word";
 							if(oldtgtID == "adUsed")
 							{
-								oldIMG.src = "img/user/已接广告icon.png";
+								oldIMG.src = "img/user/AdUsedIcon.png";
 							}
 							else if(oldtgtID == "userCenter")
 							{
-								oldIMG.src = "img/user/个人中心icon.png";
+								oldIMG.src = "img/user/UserCenterIcon.png";
 							}
 							oldText.className = "mui-tab-label";
 							oldtgtID = "profit";
@@ -99,15 +99,15 @@
 						if(oldtgtID == "userCenter") break;
 						else
 						{
-							document.getElementById('userCenterImg').src = "img/user/个人中心selected.png";
+							document.getElementById('userCenterImg').src = "img/user/UserCenterSelected.png";
 							document.getElementById('userCenterText').className += " green-word";
 							if(oldtgtID == "adUsed")
 							{
-								oldIMG.src = "img/user/已接广告icon.png";
+								oldIMG.src = "img/user/AdUsedIcon.png";
 							}
 							else if(oldtgtID == "profit")
 							{
-								oldIMG.src = "img/user/收益统计icon.png";
+								oldIMG.src = "img/user/ProfitIcon.png";
 							}
 							oldText.className = "mui-tab-label";
 							oldtgtID = "userCenter";
@@ -119,15 +119,15 @@
 						if(oldtgtID == "adUsed") break;
 						else
 						{
-							document.getElementById('adUsedImg').src = "img/user/已接广告selected.png";
+							document.getElementById('adUsedImg').src = "img/user/AdUsedSelected.png";
 							document.getElementById('adUsedText').className += " green-word";
 							if(oldtgtID == "profit")
 							{
-								oldIMG.src = "img/user/收益统计icon.png";
+								oldIMG.src = "img/user/ProfitIcon.png";
 							}
 							else if(oldtgtID == "userCenter")
 							{
-								oldIMG.src = "img/user/个人中心icon.png";
+								oldIMG.src = "img/user/UserCenterIcon.png";
 							}
 							oldText.className = "mui-tab-label";
 							oldtgtID = "adUsed";

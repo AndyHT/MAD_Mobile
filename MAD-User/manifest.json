@@ -124,7 +124,7 @@
 				"keystore": "",/*Android应用打包使用的密钥库文件*/
 				"password": "",/*Android应用打包使用密钥库中证书的密码*/
 				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.SEND_SMS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.WRITE_SMS\"/>","<uses-permission android:name=\"android.permission.READ_SMS\"/>"]
 			},
 			"orientation": ["portrait-primary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
 			"icons": {
@@ -218,7 +218,11 @@
 					"css/zjy_Center.css",
 					"img/user/已接广告selected.png",
 					"img/user/个人中心icon.png",
-					"ad-used.html"
+					"ad-used.html",
+					"img/user/AdUsedSelected.png",
+					"img/user/UserCenterIcon.png",
+					"img/user/ProfitIcon.png",
+					"img/user/ProfitSelected.png"
 				],
 				"refer": [
 					"profit.html",
@@ -257,7 +261,8 @@
 					"img/user/主页icon.png",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"img/user/注册密码.png"
+					"img/user/注册密码.png",
+					"img/user/UserCenterSelected.png"
 				],
 				"refer": [
 					"ad-used.html",
@@ -280,7 +285,8 @@
 					"img/user/可播放icon.png",
 					"img/user/已接广告icon.png",
 					"fonts/mui.ttf",
-					"css/gjq_usercenter.css"
+					"css/gjq_usercenter.css",
+					"img/user/AdUsedIcon.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -296,7 +302,9 @@
 					"css/mui.min.css",
 					"img/user/icon.png",
 					"fonts/mui.ttf",
-					"img/user/注册密码.png"
+					"img/user/注册密码.png",
+					"img/user/RegPassword.png",
+					"img/user/NiCheng.png"
 				],
 				"refer": [
 					"login.html"
@@ -312,7 +320,9 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
-					"img/user/登录密码.png"
+					"img/user/登录密码.png",
+					"img/user/MobilePhoneNum.png",
+					"img/user/LoginPassword.png"
 				],
 				"refer": [
 					"signup.html",
@@ -353,9 +363,21 @@
 					"img/user/食宿.png",
 					"img/user/租赁.png",
 					"img/user/商品.png",
-					"img/user/其他.png"
+					"img/user/其他.png",
+					"img/user/Oval 1402.png",
+					"img/user/ShoppingItem.png",
+					"img/user/Oval 140.png",
+					"img/user/YingShiYuLe.png",
+					"img/user/ZuLin.png",
+					"img/user/ZhaoPin.png",
+					"img/user/ShiSu.png",
+					"img/user/SheJiao.png",
+					"img/user/FuWu.png",
+					"img/user/JiaoYuLei.png",
+					"img/user/other.png"
 				],
-				"priority": 1
+				"priority": 1,
+				"refer": []
 			},
 			"user-identify.html": {
 				"href": "user-identify.html",
@@ -366,9 +388,12 @@
 					"css/zjy_userIdentify.css",
 					"js/mui.min.js",
 					"img/user/行驶证图片.png",
-					"img/user/车辆正面图片.png"
+					"img/user/车辆正面图片.png",
+					"img/user/CarFrontIcon.png",
+					"img/user/XingShiZhengPic.png"
 				],
-				"priority": 2
+				"priority": 2,
+				"refer": []
 			},
 			"info-list.html": {
 				"href": "info-list.html",
@@ -377,15 +402,16 @@
 					"css/mui.min.css",
 					"fonts/mui.ttf",
 					"css/gjq_usercenter.css",
-					"css/info-list.css"
+					"css/info-list.css",
+					"img/user/Group 2.png"
 				],
-				"priority": 3
+				"priority": 3,
+				"refer": []
 			}
 		},
 		"idle": {
 			"resources": [
 				"img/user/gg.jpg",
-				"img/user/Oval 140.png",
 				"detail.html",
 				"img/user/detail-annotation.png",
 				"img/user/validate-right.png",
@@ -393,14 +419,12 @@
 				"css/mui.css",
 				"img/user/Group.png",
 				"img/user/validate-wrong.png",
-				"img/user/Oval 1402.png",
 				"img/user/hh.jpg",
 				"css/gjq_detail.css",
 				"bower.json",
 				"confirm-order.html",
 				"ad-list.html",
 				"img/user/apple.jpg",
-				"img/user/Group 2.png",
 				"js/mui.js"
 			]
 		}

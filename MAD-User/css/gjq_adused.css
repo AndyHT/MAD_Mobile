@@ -39,14 +39,14 @@ h4,h5{
 }
 #echartleft{
 	
-	width: 120pt;
+	width: 50%;
 	height: 120pt;
 	float: left;
 	margin-top: 10%;
 }
 #echartright{
 	float: right;
-	width: 120pt;
+	width: 50%;
 	height: 120pt;
 	margin-top: 10%;
 }
