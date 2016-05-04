@@ -43,6 +43,7 @@
 
 	</div>
 	<script src="js/mui.enterfocus.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		document.getElementById('container').style.height=document.documentElement.clientHeight+"px";
 		mui.init();
@@ -55,7 +56,6 @@
 		
 	</script>
 	<script type="text/javascript">
-		var severUrl='http://localhost:3000/user';
 		var registerBtn=document.getElementById('register');
 		registerBtn.addEventListener('click',function(){
 			var name=document.getElementById('name').value;
@@ -93,5 +93,6 @@
 			
 		});
 	</script>
+	
 </body>
 </html>

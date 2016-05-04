@@ -41,6 +41,22 @@
 						<h5 class="mui-col-xs-10 h4-big">过滤设置</h5>
 					</a>
 				</li>
+				<li class="mui-table-view-cell">
+					<a id="ad-filter-setting" class="mui-navigate-right mui-row">
+						<span class="mui-col-xs-1">
+							<img class="allimg" src="img/user/RegPassword.png"/>
+						</span>
+						<h5 class="mui-col-xs-10 h4-big">提款</h5>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a id="ad-filter-setting" class="mui-navigate-right mui-row">
+						<span class="mui-col-xs-1">
+							<img class="allimg" src="img/user/RegPassword.png"/>
+						</span>
+						<h5 class="mui-col-xs-10 h4-big">提款记录</h5>
+					</a>
+				</li>
 			</ul>
 			<h5 class="left-10">基本信息</h5>
 			<ul class="mui-table-view">
@@ -114,6 +130,35 @@
 				})
 			},false);
 		})
+	</script>
+	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.ajax(severUrl+'/account/'+userId,{
+				data:{
+					token:token,
+					
+				},
+				dataType:'json',
+				type:'post',
+				timeout:10000,
+				success:function(data){
+					//document.getElementById('test').innerHTML=JSON.stringify(data);
+					console.log(JSON.stringify(data));
+					/* 
+						login success 
+					*/
+					if(data.errCode==0){
+//						plus.webview.show("ad-center","pop-in");
+//						plus.navigator.setStatusBarBackground("#41B17C");
+//						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
+						
+					}
+				},
+				error:function(error){
+					//document.getElementById('test').innerHTML=error.toString();
+					console.log(JSON.stringify(data));
+				}
+		}`);
 	</script>
 </body>
 </html>

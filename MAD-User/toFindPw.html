@@ -17,26 +17,26 @@
 		</span></a>
 		<a id="title" class="mui-title">找回密码</a></header>
 		<div class="mui-content">
-			<form class="mui-input-group">
+			<div class="mui-input-group">
 					<div class="label">
 						手机号 <button class="mui-pull-right yzm" id="sendCode">发送验证码</button>
 					</div>
 					<div class="mui-input-row">
 					
-						<input type="text" id="phoneNumber" placeholder="134777777">
+						<input type="text" id="phoneNumber" placeholder="请填写手机号">
 					</div>
 					<div class="label">
 						验证码
 					</div>
 					<div class="mui-input-row">
 					
-						<input type="text" id="validationCode" placeholder="726372">
+						<input type="text" id="validationCode" placeholder="请填写验证码">
 					</div><div class="label">
 						输入新密码 
 					</div>
 					<div class="mui-input-row">
 					
-						<input type="password" id="password" placeholder="***********">
+						<input type="password" id="password">
 					</div><div class="label">
 						再次输入新密码 <div class="yepDiv">
 							<center><img class="yepImg" src="img/user/yep.png"/></center>
@@ -44,12 +44,12 @@
 					</div>
 					<div class="mui-input-row">
 					
-						<input type="password" id="repassword" placeholder="************">
+						<input type="password" id="repassword">
 					</div>
 					<div class="label">
 						<button class="mui-btn-block changePw" id="findpwd"> 修改密码</button>
 					</div>
-				</form>
+				</div>
 		</div>
 		
 		
@@ -63,8 +63,8 @@
 			},false);
 		});
 	</script>
+	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		var severUrl='http://localhost:3000/user';
 		var sendCode=document.getElementById('sendCode');
 		sendCode.addEventListener('click',function(){
 			var phoneNumber=document.getElementById('phoneNumber').value;
