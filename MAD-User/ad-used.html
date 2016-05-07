@@ -7,11 +7,9 @@
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
-    <script type="text/javascript" charset="UTF-8">
-      	mui.init();
-    </script>
+   
 </head>
-<body>
+<body ng-app="mad" ng-controller="mad">
 	<div class="mui-content">
 		<div class="mui-input-row center_sea">
 			<input type="search" class="mui-input-clear" placeholder="Search">
@@ -25,7 +23,7 @@
 					<div class="mui-table-cell mui-col-xs-11">
 						<div class="mui-row">
 							<div class="mui-col-xs-8">
-								<h4 class="mui-ellipsis">广告的名字</h4>
+								<h4 class="mui-ellipsis">{{test}}</h4>
 							</div>
 							<div class="mui-col-xs-4">
 								<h5 class="mui-ellipsis mui-text-right black-h5">2016年3月30日</h5>
@@ -68,6 +66,28 @@
 				</div>
 			</li>
 			
+			<li class="mui-table-view-cell" ng-repeat="ad in ads">
+				<div class="mui-table"> 
+					<div class="mui-table-cell mui-col-xs-1 img-left-div">
+						<img class="img-left-ad" src="img/user/AdUsedIcon.png" style=""/>
+					</div>
+					<div class="mui-table-cell mui-col-xs-11">
+						<div class="mui-row">
+							<div class="mui-col-xs-8">
+								<h4 class="mui-ellipsis">{{ad.title}}</h4>
+							</div>
+							<div class="mui-col-xs-4" >
+								<h5 class="mui-ellipsis mui-text-right black-h5">{{ad.broadcastTimes}}</h5>
+							</div>	
+						</div> 
+						<div>
+							<h5>{{ad.content}}
+							</h5>
+						</div>	
+					</div>
+					
+				</div>
+			</li>
 		</ul>
 	</div>
 	<script type="text/javascript">
@@ -75,6 +95,11 @@
 		mui.plusReady(function(){
 		})
 	</script>
-				
+	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ng.js" type="text/javascript" charset="utf-8"></script>		
+	<script type="text/javascript">
+		
+	</script>
 </body>
 </html>
