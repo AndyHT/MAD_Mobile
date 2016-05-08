@@ -99,6 +99,7 @@
 				success:function(data){
 					document.getElementById('test').innerHTML=JSON.stringify(data);
 					console.log(JSON.stringify(data));
+					localStorage.token=data.token;
 					/* 
 						login success 
 					*/
@@ -110,7 +111,7 @@
 				},
 				error:function(error){
 					document.getElementById('test').innerHTML=error.toString();
-					console.log(JSON.stringify(data));
+					console.log(JSON.stringify(error));
 				}
 			});
 		});

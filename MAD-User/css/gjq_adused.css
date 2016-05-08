@@ -84,8 +84,32 @@ h4,h5{
 }
 .jdtj{
 	text-align: center;
+	margin: 0 auto;
+	margin-top: 5pt;
 	font-color: white;
 	border: 0pt solid #61c094;
-	border-radius: 120pt;
-	background-color: yellow;
+	border-radius: 50%;
+	background-color: #FB9D1F;
+	width: 80pt;
+	height:80pt;
+	padding: 7pt;
 }
+.gssy{
+	background-color:#54D897;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 5pt;
+	font-color: white;
+	border: 0pt solid #61c094;
+	border-radius: 50%;
+	width: 80pt;
+	height:80pt;
+	padding: 9pt;
+}
+.jdtj>h4,h5,hr{
+	color: white;
+}
+.gssy>h4,h7,hr{
+	color: white;
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+   	<link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
+	<link rel="stylesheet" type="text/css" href="css/confirm-order.css"/>
+	<link rel="stylesheet" type="text/css" href="css/gjq_toFindPw.css"/>
+</head>
+<body>
+	<header class="mui-bar-nav mui-bar head-top">
+		<a id="back" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span id="inback">
+			个人信息页
+		</span></a>
+		<a id="title" class="mui-title">提款</a></header>
+		<div class="mui-content">
+			<div class="mui-input-group">
+					
+					<div class="label">
+						提款账户
+					</div>
+					<div class="mui-input-row">
+					
+						<input type="text" id="account" placeholder="请填写账户">
+					</div><div class="label">
+						提款金额 
+					</div>
+					<div class="mui-input-row">
+					
+						<input type="text" id="number" placeholder="请填写金额">
+					</div>
+					<div class="label">
+						<button class="mui-btn-block changePw" id="withdraw"> 提款</button>
+					</div>
+				</div>
+		</div>
+		
+		
+		
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function(){
+			mui('#back')[0].addEventListener('tap',function(event){
+				plus.navigator.setStatusBarBackground("#D4EBEB");
+				plus.navigator.setStatusBarStyle( "UIStatusBarStyleDefault" );
+			},false);
+		});
+	</script>
+	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var withdraw=document.getElementById('withdraw');
+		withdraw.addEventListener('click',function(){
+			var account=document.getElementById('account').value;
+			var number=document.getElementById('number').value;
+			if(account&&number){
+				mui.ajax(severUrl+'/account/withdraw',{
+				data:{
+					token:token,
+					number:number,
+					account:account
+				},
+				dataType:'json',
+				type:'post',
+				timeout:10000,
+				success:function(data){
+					//document.getElementById('test').innerHTML=JSON.stringify(data);
+					console.log(JSON.stringify(data));
+					/* 
+						login success 
+					*/
+					if(data.errCode==0){
+						console.log('success');
+					}
+				},
+				error:function(error){
+					//document.getElementById('test').innerHTML=error.toString();
+					console.log(JSON.stringify(error));
+				}
+			});
+			}
+			
+		});
+	</script>
+</body>
+</html>
