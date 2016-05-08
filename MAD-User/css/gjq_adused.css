@@ -43,12 +43,14 @@ h4,h5{
 	height: 120pt;
 	float: left;
 	margin-top: 10%;
+	text-align: center;
 }
 #echartright{
 	float: right;
 	width: 50%;
 	height: 120pt;
 	margin-top: 10%;
+	text-align: center;
 }
 
 .chart2{
@@ -76,7 +78,14 @@ h4,h5{
 	background-color: #FEB23C;
 }
 .img-left-used{
-	width: 30pt;
+	width: 30pt; 
 	height: 20pt !important;
 	margin-right: 5% !important;
+}
+.jdtj{
+	text-align: center;
+	font-color: white;
+	border: 0pt solid #61c094;
+	border-radius: 120pt;
+	background-color: yellow;
 }

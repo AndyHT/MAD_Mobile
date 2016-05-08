@@ -35,12 +35,20 @@
 		<div class="chart2">
 			
 				<div id="echartleft">
-					
+					<h4>今日接单统计</h4>
+					<div class="jdtj">
+						<h5>12单</h5>
+						<hr />
+						<h5>平均价格</h5>
+					</div>
 				</div>
 			
 			
 				<div id="echartright">
-					
+					<h4>可估算／总收益</h4>
+					<div class="gssj">
+						
+					</div>
 				</div>
 			
 		</div>
@@ -59,8 +67,8 @@
 	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var echartbig=echarts.init(document.getElementById('echartbig'));
-		var echartleft=echarts.init(document.getElementById('echartleft'));
-		var echartright=echarts.init(document.getElementById('echartright'));
+		//var echartleft=echarts.init(document.getElementById('echartleft'));
+		//var echartright=echarts.init(document.getElementById('echartright'));
 		var echartline=echarts.init(document.getElementById('echartline'));
 		var option2={
 			    title : {
@@ -255,8 +263,8 @@
 				};
 		echartline.setOption(optionline);
 		echartbig.setOption(option2);
-		echartright.setOption(option1);
-		echartleft.setOption(option3);
+		//echartright.setOption(option1);
+		//echartleft.setOption(option3);
 		var ran={};
 		ran.n=function(){
 				return Math.round(Math.random()*15);
