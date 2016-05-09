@@ -23,4 +23,14 @@ mad.controller('madUser',['$scope','$http',function($scope,$http){
 		});
 	};
 	$scope.getInfo();
+}]);
+mad.controller('madMsg',['$scope','$http',function($scope,$http){
+	$scope.getMsg=function(){
+		$http.get(severUrl+'/msglist/'+userId+'?token='+token).then(function(response){
+			$scope.msglist=response.data.messageList;
+		},function(error){
+			console.log(error);
+		})
+	};
+	$scope.getMsg();   
 }])

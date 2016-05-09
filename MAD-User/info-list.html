@@ -12,13 +12,17 @@
       	mui.init();
     </script>
 </head>
-<body>
+<body ng-app="mad" ng-controller="madMsg">
 	<header class="mui-bar-nav mui-bar head-top">
 		<a id="back" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span id="inback">
 			广告详情
 		</span></a>
-		<a id="title" class="mui-title">消息列表</a></header>
-	
+		<a id="title" class="mui-title">消息列表</a>
+		<a class="mui-icon mui-pull-right" ng-click="getMsg()" id="back"><span>
+			<h4>刷新</h4>
+		</span></a>
+	</header>
+		
 	<div class="mui-content">
 		
 		<ul class="mui-table-view mui-table-view-stripped mui-table-view-condensed" >
@@ -44,9 +48,33 @@
 					</div>
 				</div>
 			</li>
-			
+			<li class="mui-table-view-cell"	id="toaddetail" ng-repeat="msg in msglist">
+				<div class="mui-table">
+					<div class="mui-table-cell mui-col-xs-1 img-left-div">
+						<img class="img-left-ad" src="img/user/Group 2.png" style=""/>
+					</div>
+					<div class="mui-table-cell mui-col-xs-7">
+						<h4 class="mui-ellipsis">系统消息</h4>
+						<div class="mui-table">
+							
+							<div class="mui-table-cell mui-col-xs-11">
+								<h5>{{msg.content}}</h5>
+							</div>
+						</div>
+						
+					</div>
+					<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+						<span class="mui-h6">
+							{{msg.pushTime}}
+						</span>
+					</div>
+				</div>
+			</li>
 			
 		</ul>
 	</div>
+	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ng.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" name="accommodation" src="img/user/Oval 140.png"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/JiaoYuLei.png);" >
@@ -49,7 +49,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" src="img/user/Oval 140.png" name="commodity"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/FuWu.png);" >
@@ -66,7 +66,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" src="img/user/Oval 140.png" name="education"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/ZhaoPin.png);" >
@@ -83,7 +83,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" src="img/user/Oval 140.png" name="entertainment"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/SheJiao.png);" >
@@ -100,7 +100,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" src="img/user/Oval 140.png" name="other"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/ShiSu.png);" >
@@ -117,7 +117,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" src="img/user/Oval 140.png" name="recruit"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/ZuLin.png);" >
@@ -135,7 +135,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" src="img/user/Oval 140.png" name="service"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/ShoppingItem.png);" >
@@ -152,7 +152,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" name="social" src="img/user/Oval 140.png"/>
 	</div>
 	<div class="mui-row">
 		<ul class="mui-card mui-table-view mui-table-view-stripped mui-table-view-condensed filter-cell" style="background-image: url(img/user/other.png);">
@@ -169,7 +169,7 @@
 				</div>
 			</li>
 		</ul>
-			<img class="mui-pull-right oval140" src="img/user/Oval 140.png"/>
+			<img class="mui-pull-right oval140" name="tenancy" src="img/user/Oval 140.png"/>
 	</div>
 	
 	
@@ -177,10 +177,12 @@
 	
 	
 <script src="js/mui.min.js"></script>
+<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="UTF-8">
   	mui.init();
   	mui.plusReady(function(){
   		var SrcPathArr = new Array();
+  		var filterArray=[1,1,1,1,1,1,1,1,1];
   		mui('.mui-content').on('tap','.oval140',function(){
 //		console.log(this.src);
   		SrcPathArr = this.src.split("/");
@@ -189,13 +191,58 @@
   		{
 //			console.log('active2inActive');
   			this.src="img/user/Oval 1402.png";
+  			console.log(this.name);
+  			setFilter(this.name,0);
   		}
   		else
   		{
 //			console.log("inActive2active");
   			this.src="img/user/Oval 140.png";
+  			setFilter(this.name,1);
   		}
   	});
+		function setFilter(name,val){
+			var tmp;
+			switch (name){
+				case 'accommodation':
+					tmp=0;
+					break;
+				case 'commodity':
+					tmp=1;
+					break;
+				case 'education':
+					tmp=2;
+					break;
+				case 'entertainment':
+					tmp=3;
+					break;
+				case 'other':
+					tmp=4;
+					break;
+				case 'recruit':
+					tmp=5;
+					break;
+				case 'service':
+					tmp=6;
+					break;
+				case 'social':
+					tmp=7;
+					break;
+				case 'tenancy':
+					tmp=8;
+					break;
+				
+			};
+			filterArray[tmp]=val;
+			console.log(filterArray);
+			mui.post(severUrl+'/advert/filter',{
+				token:localStorage.token,
+				"adValidationSettings":filterArray 
+			},function(data){
+				console.log(JSON.stringify(data));
+			},'json')
+				
+		}
   	});
 </script>	
 </body>
