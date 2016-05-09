@@ -233,11 +233,12 @@
 					break;
 				
 			};
+			console.log(tmp)
 			filterArray[tmp]=val;
 			console.log(filterArray);
 			mui.post(severUrl+'/advert/filter',{
-				token:localStorage.token,
-				"adValidationSettings":filterArray 
+				"token":localStorage.token,
+				"adValidationSettings":filterArray.toString()
 			},function(data){
 				console.log(JSON.stringify(data));
 			},'json')

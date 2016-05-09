@@ -1,5 +1,5 @@
 //var severUrl='http://121.42.57.59:4000/user';
-var severUrl='http://localhost:4000/user';
+var severUrl='http://127.0.0.1:4000/user';
 var userId='userId1';
 var token=localStorage.token;
 var ads;
@@ -8,7 +8,6 @@ function getAds(){
 	mui.ajax(severUrl+'/advert/all/'+userId,{
 				data:{
 					token:token,
-					
 				},
 				dataType:'json',
 				type:'get',
