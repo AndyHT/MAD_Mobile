@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
+	<link rel="stylesheet" type="text/css" href="css/info-list.css"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body ng-app="mad" ng-controller="madWdh">
+	<header class="mui-bar-nav mui-bar head-top">
+		<a id="back" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span id="inback">
+			个人中心
+		</span></a>
+		<a id="title" class="mui-title">提款记录</a>
+		<a class="mui-icon mui-pull-right" ng-click="getHistory()" id="back"><span>
+			<h4>刷新</h4>
+		</span></a>
+	</header>
+		
+	<div class="mui-content">
+		
+		<ul class="mui-table-view mui-table-view-stripped mui-table-view-condensed" >
+			<li class="mui-table-view-cell"	id="toaddetail">
+				<div class="mui-table">
+					
+					<div class="mui-table-cell mui-col-xs-8">
+						<h4 class="mui-ellipsis">系统消息</h4>
+						<div class="mui-table">
+							
+							<div class="mui-table-cell mui-col-xs-11">
+								<h5>您的提现已到账！请注意查收，谢谢</h5>
+							</div>
+						</div>
+						
+					</div>
+					<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+						<span class="mui-h6">
+							2016年3月6日16:00
+						</span>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell"	id="toaddetail" ng-repeat="history in historyList">
+				<div class="mui-table">
+					
+					<div class="mui-table-cell mui-col-xs-8">
+						<h4 class="mui-ellipsis">账户：{{history.alipay}}</h4>
+						<div class="mui-table">
+							
+							<div class="mui-table-cell mui-col-xs-11">
+								<h5>提款金额：{{history.number}}
+									<span id="" class="mui-pull-right"> 
+										提款状态：{{history.status}}
+									</span>
+								</h5>
+								
+							</div>
+						</div>
+						
+					</div>
+					<div class="mui-table-cell mui-col-xs-4 mui-text-right">
+						<span class="mui-h6">
+							{{history.time}}
+						</span>
+					</div>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ng.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

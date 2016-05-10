@@ -28,7 +28,7 @@ function getAds(){
 				error:function(error){
 					console.log(JSON.stringify(error));
 					
-				}
+				} 
 		});
 	console.log("ss"+ads);
 	return ads;

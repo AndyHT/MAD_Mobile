@@ -33,4 +33,13 @@ mad.controller('madMsg',['$scope','$http',function($scope,$http){
 		})
 	};
 	$scope.getMsg();   
+}]);
+mad.controller('madWdh',['$scope','$http',function($scope,$http){
+	$scope.getHistory=function(){
+		$http.get(severUrl+'/withdraw/'+userId+'?token='+token).then(function(response){
+			$scope.historyList=response.data.withdrawHistory;
+		},function(error){
+			console.log(error);
+		})
+	}
 }])

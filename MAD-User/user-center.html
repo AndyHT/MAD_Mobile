@@ -49,7 +49,7 @@
 						<h5 class="mui-col-xs-10 h4-big">提款</h5>
 					</a>
 				</li>
-				<li class="mui-table-view-cell">
+				<li class="mui-table-view-cell" id="toWithdrawHistory">
 					<a id="ad-filter-setting" class="mui-navigate-right mui-row">
 						<span class="mui-col-xs-1">
 							<img class="allimg" src="img/user/RegPassword.png"/>
@@ -148,6 +148,20 @@
 				mui.openWindow({
 					url:'toWithdraw.html',
 					id:'user-withdraw', 
+					show:{
+						anishow:'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					preload:true
+				})
+			},false);
+			var toWithdrawHistory = document.getElementById('toWithdrawHistory');
+			toWithdrawHistory.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'withdrawHistory.html',
+					id:'user-withdrawHistory', 
 					show:{
 						anishow:'pop-in'
 					},
