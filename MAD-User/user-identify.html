@@ -7,6 +7,64 @@
     <link href="css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/gjq_usercenter.css"/>
 	<link rel="stylesheet" type="text/css" href="css/zjy_userIdentify.css"/>
+	<style type="text/css">
+		.file {
+    position: relative;
+    margin-left: 10pt;
+	margin-top: 15pt;
+	width: 150pt;
+	height:80pt;
+	
+    /*display: inline-block;*/
+    background: url(img/user/XingShiZhengPic.png);
+    background-size:150pt 80pt;
+	background-repeat:no-repeat;
+    /*border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;*/
+}
+.file1{
+	
+    position: relative;
+    margin-left: 10pt;
+	margin-top: 15pt;
+	width: 100pt;
+	height:80pt;
+	
+    /*display: inline-block;*/
+    background: url(img/user/CarFrontIcon.png);
+    background-size:100pt 80pt;
+background-repeat:no-repeat;
+    /*border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;*/
+
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file1 input{
+	position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+	</style>
 </head>
 <body>
 	<header class="mui-bar-nav mui-bar head-top">
@@ -19,39 +77,50 @@
 				姓名:
 			</div>
 			<div class="mui-input-row">
-				<input type="text" placeholder="输入姓名">
+				<input type="text" placeholder="输入姓名" id="name">
 			</div>
 			<div class="label">
 				行驶证号:
 			</div>
 			<div class="mui-input-row">
-				<input type="text" placeholder="输入行驶证号">
+				<input type="text" placeholder="输入行驶证号" id="vehicleLicense">
 			</div>
 			<div class="label">
 				车辆识别码: 
 			</div>
 			<div class="mui-input-row">
-				<input type="password" placeholder="请输入17位车辆识别码">
+				<input type="password" placeholder="请输入17位车辆识别码" id="VIN">
 			</div>
 			<div class="label">
 				上传行驶证图片: 
 			</div>
 			<div id="" style="position:relative">
-				<img src="img/user/XingShiZhengPic.png" class="xsz"/>
-				<button class="mui-pull-right slimg">示例图片</button>
+				<img style="display: none;margin-left: 10pt;margin-top: 10pt;width: 100pt;height: 100pt;" id="timg1" src="img/user/AdUsedIcon.png"/>
+				<div class="file" id="toimg1">
+					
+					<input type="file" name="" id="img1" value="" />
+				</div>
+				<!--<img src="img/user/XingShiZhengPic.png" class="xsz"/>-->
+				<!--<button class="mui-pull-right slimg">示例图片</button>-->
 			</div>
 			
 			<div class="label">
-				上传行驶证图片: 
+				上传车辆正面图片: 
 				
 			</div>
 			<div id="" style="position:relative">
-				<img src="img/user/CarFrontIcon.png" class="clzm"/>
-			<button class="mui-pull-right slimg">示例图片</button>
+				<img style="display: none;margin-left: 10pt;margin-top: 10pt;width: 100pt;height: 100pt;" id="timg2" src="img/user/AdUsedIcon.png"/>
+
+				<div class="file1" id="toimg2">
+					
+					<input type="file" name="" id="img2" value="" />
+				</div>
+				<!--<img src="img/user/CarFrontIcon.png" class="clzm"/>-->
+			<!--<button class="mui-pull-right slimg">示例图片</button>--> 
 			</div>
 			
 			<div class="label">
-				<button class="mui-btn-block changePw"> 修改密码</button>
+				<button class="mui-btn-block changePw" id="change"> 修改密码</button>
 			</div>
 		</form>
 	</div>
@@ -62,6 +131,74 @@
 //    		console.log(screenHeight);
       	mui.plusReady(function(){
       	});
+    </script>
+    <script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    		var img1='1';
+    		var img2='1';
+    		var change=document.getElementById('change');
+    		change.addEventListener('click',function(){
+    			//console.log(name,vehicleLicense,VIN);
+    			var name=document.getElementById('name').value;
+    			var vehicleLicense=document.getElementById('vehicleLicense').value;
+    			var VIN=document.getElementById('VIN').value;
+    			if(true){
+    				mui.post(severUrl+'/check/submit',{
+    					token:token,
+    					userId:userId,
+    					check:{
+    						name:name,
+    						vehicleLicense:vehicleLicense,
+    						VIN:VIN,
+    						vehicleLicensePicture:img1,
+//  						carPicture:img2
+    					}
+    				},function(data){
+    					console.log(data);
+    				},function(error){
+    					console.log(error);
+    				});
+    			};
+    		},false);
+    </script>
+    <script type="text/javascript">
+    	function ProcessFile1( e ) { 
+            var file = document.getElementById('img1').files[0];
+            if (file) {
+                
+                var reader = new FileReader();
+                reader.onload = function ( event ) { 
+                    img1 = event.target.result;
+                    console.log(img1);
+                    document.getElementById("toimg1").style.display = 'none';
+                    document.getElementById('timg1').src=img1;
+                    document.getElementById('timg1').style.display='block';
+                    
+                    };
+              }
+            reader.readAsDataURL( file );
+            }
+    	function ProcessFile2( e ) { 
+            var file = document.getElementById('img2').files[0];
+            if (file) {
+                
+                var reader = new FileReader(); 
+                reader.onload = function ( event ) { 
+                    img2 = event.target.result;
+                   	document.getElementById("toimg2").style.display = 'none';
+                    document.getElementById('timg2').src=img2;
+                    document.getElementById('timg2').style.display='block';
+                    };
+              }
+            reader.readAsDataURL( file );
+            }
+        function contentLoaded () {
+            document.getElementById('img1').addEventListener( 'change' ,
+			ProcessFile1 , false );
+			document.getElementById('img2').addEventListener( 'change' ,
+			ProcessFile2 , false );
+        }
+        window.addEventListener( "DOMContentLoaded" , contentLoaded , false );
     </script>
 </body>
 </html>
