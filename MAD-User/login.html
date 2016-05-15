@@ -38,13 +38,13 @@
 					statusBarBackground: '#D4EBEB',
 					preloadLimit:3,
 					preloadPages:[
-					{
-						url:"ad-center.html",
-						id:"ad-center",
-						styles:{
-							popGesture:"none"
-						}
-					},
+//					{
+//						url:"ad-center.html",
+//						id:"ad-center",
+//						styles:{
+//							popGesture:"none"
+//						}
+//					},
 					{
 						url:'signup.html',
 						id:"signup",
@@ -100,11 +100,22 @@
 					document.getElementById('test').innerHTML=JSON.stringify(data);
 					console.log(JSON.stringify(data));
 					localStorage.token=data.token;
+					localStorage.userId=data.userId;
 					/* 
 						login success 
 					*/
 					if(data.errCode==0){
-						plus.webview.show("ad-center","pop-in");
+						mui.openWindow({
+					url:'ad-center.html',
+					show:{
+						anishow:'pop-in'
+					},
+					styles: {
+								popGesture: 'hide'
+					},
+					//preload:true
+				})
+						//uuserIplus.webview.show("ad-center","pop-in");
 						plus.navigator.setStatusBarBackground("#41B17C");
 						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
 					}
