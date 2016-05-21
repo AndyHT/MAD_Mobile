@@ -11,14 +11,14 @@
 <body>
 	<div class="mui-container-fluid container" id="container">
 		<center><img class="icon" src="img/user/icon.png"/></center>
-		<center><a class="move-ad">移动的广告MAD</a></center>
+		<center><div class="move-ad">移动的广告MAD</div></center>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/MobilePhoneNum.png"/><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/MobilePhoneNum.png"/><a class="input-a">：</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" id="username" placeholder="登录手机号"/>
 			</div>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/LoginPassword.png" /><a class="input-a">:</a></label>
-				<input type="text" class="mui-input-clear mui-input input-log" id="password" placeholder="密码"/>
+				<label><img class="input-img" src="img/user/LoginPassword.png" /><a class="input-a">：</a></label>
+				<input type="password" class="mui-input-clear mui-input input-log" id="password" placeholder="密码"/>
 			</div>
 			<!--<button class="mui-btn-block login-btn" id="toadcenter">
 				登录
@@ -26,14 +26,22 @@
 			<button class="mui-btn-block login-btn" id="login">
 				登录
 			</button>
-			<h6><a id="test"></a></h6>
 			<div class="login-bottom">
-				<a class="bot-left" id="tosignup">没有账号，现在注册</a>
-				<a class="bot-right" id="toFindPw">忘记密码</a>
+					<a class="bot-left" id="tosignup">没有账号，现在注册</a>
+					<a class="bot-right" id="toFindPw">忘记密码</a>
+				<!--<center><a id="tologin">已有账号？现在登录</a></center>-->
 			</div>
 	</div>
 	<script type="text/javascript">
-		document.getElementById('container').style.height=document.documentElement.clientHeight+"px";
+//		document.getElementById('container').style.height=document.documentElement.clientHeight+"px";
+		var clientH = document.documentElement.clientHeight;
+		var containerH = document.getElementById('container').offsetHeight;
+		document.getElementById('container').style.height = clientH+"px";
+		console.log(containerH);
+		if(containerH > clientH)
+		{
+			document.getElementById('container').style.height = containerH+"px";
+		}
 		mui.init({
 					statusBarBackground: '#D4EBEB',
 					preloadLimit:3,
@@ -97,7 +105,6 @@
 				type:'post',
 				timeout:10000,
 				success:function(data){
-					document.getElementById('test').innerHTML=JSON.stringify(data);
 					console.log(JSON.stringify(data));
 					localStorage.token=data.token;
 					localStorage.userId=data.userId;
@@ -121,7 +128,6 @@
 					}
 				},
 				error:function(error){
-					document.getElementById('test').innerHTML=error.toString();
 					console.log(JSON.stringify(error));
 				}
 			});

@@ -14,21 +14,21 @@
 <body>
 	<div class="mui-container-fluid container" id="container">
 		<center><img class="icon" src="img/user/icon.png"/></center>
-		<center><a class="move-ad">移动的广告MAD</a></center>
+		<center><div class="move-ad">移动的广告MAD</div></center>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/NiCheng.png"/><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/NiCheng.png"/><a class="input-a">：</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" id="name" placeholder="昵称"/>
 			</div>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/MobilePhoneNum.png"/><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/MobilePhoneNum.png"/><a class="input-a">：</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" id="username" placeholder="手机号"/>
 			</div>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/RegPassword.png"/><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/RegPassword.png"/><a class="input-a">：</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" id="password" placeholder="密码"/>
 			</div>
 			<div class="mui-input-row login">
-				<label><img class="input-img" src="img/user/RegPassword.png"/ width="20%" ><a class="input-a">:</a></label>
+				<label><img class="input-img" src="img/user/RegPassword.png"/><a class="input-a">：</a></label>
 				<input type="text" class="mui-input-clear mui-input input-log" id="repassword" placeholder="确认密码"/>
 			</div>
 			
@@ -45,7 +45,17 @@
 	<script src="js/mui.enterfocus.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		document.getElementById('container').style.height=document.documentElement.clientHeight+"px";
+//		document.getElementById('container').style.height=document.documentElement.clientHeight+"px";
+//		document.getElementById('container').style.height="100%";
+		var clientH = document.documentElement.clientHeight;
+		var containerH = document.getElementById('container').offsetHeight;
+		document.getElementById('container').style.height = clientH+"px";
+		console.log(containerH);
+		if(containerH > clientH)
+		{
+			document.getElementById('container').style.height = containerH+"px";
+		}
+		
 		mui.init();
 		mui.plusReady(function(){
 			var tologin=document.getElementById('tologin');
