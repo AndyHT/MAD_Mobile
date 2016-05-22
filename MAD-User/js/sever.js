@@ -22,7 +22,6 @@ function getAds(){
 						ads=data.adList;
 						console.log(ads);
 						//return ads;
-						
 					}
 				},
 				error:function(error){

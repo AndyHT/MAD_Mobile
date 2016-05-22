@@ -33,8 +33,10 @@ mad.controller('madUser',['$scope','$http',function($scope,$http){
 }]);
 mad.controller('madMsg',['$scope','$http',function($scope,$http){
 	$scope.getMsg=function(){
+		console.log('here');
 		$http.get(severUrl+'/msglist/'+userId+'?token='+token).then(function(response){
 			$scope.msglist=response.data.messageList;
+			console.log(JSON.stringify(response));
 		},function(error){
 			console.log(error);
 		})

@@ -96,6 +96,9 @@
 		loginBtn.addEventListener('click',function(){
 			var username=document.getElementById('username').value;
 			var password=document.getElementById('password').value;
+			if(username=='' || password=='')
+				mui.toast('用户名密码不能为空');
+			else
 			mui.ajax(severUrl+'/login',{
 				data:{
 					username:username,
@@ -106,6 +109,7 @@
 				timeout:10000,
 				success:function(data){
 					console.log(JSON.stringify(data));
+					console.log('errcode:'+data.errCode);
 					localStorage.token=data.token;
 					localStorage.userId=data.userId;
 					/* 
@@ -113,22 +117,30 @@
 					*/
 					if(data.errCode==0){
 						mui.openWindow({
-					url:'ad-center.html',
-					show:{
-						anishow:'pop-in'
-					},
-					styles: {
-								popGesture: 'none'
-					},
-					//preload:true
-				})
-						//uuserIplus.webview.show("ad-center","pop-in");
+							url:'ad-center.html',
+							show:{
+								anishow:'pop-in'
+							},
+							styles: {
+										popGesture: 'none'
+							}
+							//preload:true
+						});
 						plus.navigator.setStatusBarBackground("#41B17C");
 						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
+					}
+					else if(data.errCode==102){
+						mui.toast('用户名密码错误，请重新填写！');
+					}
+					else{
+						mui.toast('严重错误，请联系开发者，错误代码:'+data.errCode);
 					}
 				},
 				error:function(error){
 					console.log(JSON.stringify(error));
+//					console.log('ere');
+					if(error.status==0)
+					mui.toast('网络连接异常');
 				}
 			});
 		});
