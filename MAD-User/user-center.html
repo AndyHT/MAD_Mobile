@@ -18,7 +18,7 @@
 						</div>
 						<div class="mui-col-xs-6">
 							<h5 class="h5-big">{{info.name}}</h5>
-							<h5>驾驶证号：{{info.VIN}}</h5>
+							<h5>驾驶证号：<br/>{{info.VIN}}</h5>
 						</div>
 						<div class="mui-col-xs-4">
 							<button class="mui-btn info-btn mui-pull-right" id="toIdentify">点击认证</button>
@@ -81,8 +81,8 @@
 				</li>
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right">
-						<h5>所在地</h5>
-						<h5 class="h5-big">{{info.address}}</h5>
+						<h5>支付宝账号</h5>
+						<h5 class="h5-big">{{info.alipay}}</h5>
 					</a>
 				</li>
 			</ul>
@@ -94,6 +94,9 @@
 					</a>
 				</li>
 			</ul>
+			<div class="logoff">
+				<button type="button" class="mui-btn mui-btn-danger mui-btn-block">退出登录</button>
+			</div>
 		</div>
 	<script src="js/mui.min.js"></script>
     <script type="text/javascript" charset="UTF-8">
@@ -200,7 +203,7 @@
 					//document.getElementById('test').innerHTML=error.toString();
 					console.log(JSON.stringify(data));
 				}
-		}`);
+		});
 	</script>
 	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>

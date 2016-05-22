@@ -16,7 +16,14 @@ mad.controller('mad',['$scope','$http',function($scope,$http){
 mad.controller('madUser',['$scope','$http',function($scope,$http){
 	$scope.getInfo=function(){
 		$http.get(severUrl+'/account/'+userId+'?token='+token).then(function(response){
-			$scope.info=response.data;
+//			$scope.info=response.data;
+			var userINF = response.data;
+			if(userINF.VIN == "") userINF.VIN = "未认证驾驶证";
+			if(userINF.email == "") userINF.email = "未绑定邮箱";
+			if(userINF.gender == true) userINF.gender = "男";
+			else if(userINF.gender == false) userINF.gender = "女";
+			if(userINF.alipay == "") userINF.alipay = "未绑定支付宝账号";
+			$scope.info = userINF;
 			console.log(response);
 		},function(error){
 			

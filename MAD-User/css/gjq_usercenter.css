@@ -22,9 +22,11 @@
 }
 .img-left-ad{
 	width: 70%;
-	margin: 0 auto;
-	margin-bottom: -30%;
+	/*margin: 0 auto;*/
+	/*margin-bottom: -30%;*/
 	max-width: 50pt;
+	position: absolute;
+	top:25%;
 }
 .center_sea{
 	margin-bottom:-4% ;
@@ -32,6 +34,7 @@
 }
 .img-left-div{
 	width: 38pt;
+	position:relative;
 	
 }
 .bar-img{
@@ -80,4 +83,11 @@
 
 .img-annontaion{
 	max-width: 9pt;
+}
+.mui-table-view-cell:after{
+	left:5px;
+	right:5px;
+}
+.logoff{
+	margin:5pt 10pt;
 }
