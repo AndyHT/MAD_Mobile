@@ -95,7 +95,7 @@
 				</li>
 			</ul>
 			<div class="logoff">
-				<button type="button" class="mui-btn mui-btn-danger mui-btn-block">退出登录</button>
+				<button type="button" class="mui-btn mui-btn-danger mui-btn-block" onclick="LogOut()">退出登录</button>
 			</div>
 		</div>
 	<script src="js/mui.min.js"></script>
@@ -178,32 +178,41 @@
 	</script>
 	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		mui.ajax(severUrl+'/account/'+userId,{
-				data:{
-					token:token,
-					
-				},
-				dataType:'json',
-				type:'post',
-				timeout:10000,
-				success:function(data){
-					//document.getElementById('test').innerHTML=JSON.stringify(data);
-					console.log(JSON.stringify(data));
-					/* 
-						login success 
-					*/
-					if(data.errCode==0){
-//						plus.webview.show("ad-center","pop-in");
-//						plus.navigator.setStatusBarBackground("#41B17C");
-//						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
-						
-					}
-				},
-				error:function(error){
-					//document.getElementById('test').innerHTML=error.toString();
-					console.log(JSON.stringify(error));
-				}
-		});
+	function LogOut(){
+		localStorage.clear();
+		console.log(localStorage.userId);
+		console.log(localStorage.token);
+		var thisWV = plus.webview.getWebviewById('ad-center');
+		plus.navigator.setStatusBarBackground("#D4EBEB");
+		plus.navigator.setStatusBarStyle( "UIStatusBarStyleDefault" );
+		plus.webview.close(thisWV);
+	}
+//		mui.ajax(severUrl+'/account/'+userId,{
+//				data:{
+//					token:token,
+//					
+//				},
+//				dataType:'json',
+//				type:'post',
+//				timeout:10000,
+//				success:function(data){
+//					//document.getElementById('test').innerHTML=JSON.stringify(data);
+//					console.log(JSON.stringify(data));
+//					/* 
+//						login success 
+//					*/
+//					if(data.errCode==0){
+////						plus.webview.show("ad-center","pop-in");
+////						plus.navigator.setStatusBarBackground("#41B17C");
+////						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
+//						
+//					}
+//				},
+//				error:function(error){
+//					//document.getElementById('test').innerHTML=error.toString();
+//					console.log(JSON.stringify(error));
+//				}
+//		});
 	</script>
 	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>

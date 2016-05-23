@@ -117,15 +117,18 @@
 					*/
 					if(data.errCode==0){
 						mui.openWindow({
+							id:'ad-center',
 							url:'ad-center.html',
 							show:{
 								anishow:'pop-in'
 							},
 							styles: {
-										popGesture: 'none'
+								popGesture: 'none'
 							}
 							//preload:true
 						});
+						document.getElementById('username').value='';
+						document.getElementById('password').value='';
 						plus.navigator.setStatusBarBackground("#41B17C");
 						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
 					}

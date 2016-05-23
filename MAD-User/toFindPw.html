@@ -56,8 +56,10 @@
 		mui.init();
 		mui.plusReady(function(){
 			mui('#back')[0].addEventListener('tap',function(event){
-				plus.navigator.setStatusBarBackground("#D4EBEB");
-				plus.navigator.setStatusBarStyle( "UIStatusBarStyleDefault" );
+				if(plus.webview.getWebviewById('ad-center')==null){
+					plus.navigator.setStatusBarBackground("#D4EBEB");
+					plus.navigator.setStatusBarStyle( "UIStatusBarStyleDefault" );
+				}			
 			},false);
 		});
 	</script>
@@ -74,7 +76,9 @@
 				type:'post',
 				timeout:10000,
 				success:function(data){
-					
+					if(data.errCode==0){
+						mui.toast('发送验证码成功，请查收');
+					}
 				}
 			})
 		})
@@ -97,20 +101,19 @@
 				type:'post',
 				timeout:10000,
 				success:function(data){
-					//document.getElementById('test').innerHTML=JSON.stringify(data);
 					console.log(JSON.stringify(data));
-					/* 
-						login success 
-					*/
 					if(data.errCode==0){
-						plus.webview.show("ad-center","pop-in");
-						plus.navigator.setStatusBarBackground("#41B17C");
-						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
+						mui.toast('修改密码成功');
+						mui.back();
 					}
+					
 				},
 				error:function(error){
-					//document.getElementById('test').innerHTML=error.toString();
-					console.log(JSON.stringify(data));
+					console.log(JSON.stringify(error));
+					mui.toast('修改密码失败，errmsg:'+JSON.stringify(error));
+					plus.webview.show("ad-center","pop-in");
+					plus.navigator.setStatusBarBackground("#41B17C");
+					plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
 				}
 			});
 			}
