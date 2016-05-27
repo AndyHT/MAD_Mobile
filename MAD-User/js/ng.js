@@ -30,6 +30,12 @@ mad.controller('madUser',['$scope','$http',function($scope,$http){
 			else if(userINF.gender == false) userINF.gender = "女";
 			if(userINF.alipay == "") userINF.alipay = "未绑定支付宝账号";
 			$scope.info = userINF;
+			if(userINF.vehicleLicensePicture==''){
+				$scope.imgSrc='img/user/icon.png';
+			}else{
+				$scope.imgSrc=userINF.vehicleLicensePicture;
+			} 
+			
 			console.log(response);
 		},function(error){
 			
