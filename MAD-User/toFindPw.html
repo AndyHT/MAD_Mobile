@@ -49,9 +49,6 @@
 					</div>
 				</div>
 		</div>
-		
-		
-		
 	<script type="text/javascript">
 		mui.init();
 		mui.plusReady(function(){
@@ -66,8 +63,14 @@
 	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var sendCode=document.getElementById('sendCode');
+		var passwordPattern=/^[A-Za-z0-9_\-!]{6,}$/;
+		var phoneNumPattern=/^0?(13|14|15|18|17)[0-9]{9}$/;
 		sendCode.addEventListener('click',function(){
 			var phoneNumber=document.getElementById('phoneNumber').value;
+			if(!phoneNumPattern.test(phoneNumber)) {
+				mui.toast('手机号格式错误');
+				return;
+			}
 			mui.ajax(severUrl+'/sendValidate',{
 				data:{
 					phoneNumber:phoneNumber
@@ -78,6 +81,9 @@
 				success:function(data){
 					if(data.errCode==0){
 						mui.toast('发送验证码成功，请查收');
+					}
+					else{
+						mui.toast('发送验证码失败');
 					}
 				}
 			})
@@ -90,6 +96,14 @@
 			var phoneNumber=document.getElementById('phoneNumber').value;
 			var password=document.getElementById('password').value;
 			var repassword=document.getElementById('repassword').value;
+			if(!phoneNumPattern.test(phoneNumber)) {
+				mui.toast('手机号格式错误');
+				return;
+			}
+			if(!passwordPattern.test(password)){
+				mui.toast('密码格式有误！长度至少6位且只允许_-!三种符号');
+				return;
+			}
 			if(password==repassword){
 				mui.ajax(severUrl+'/findpwd',{
 				data:{
@@ -106,6 +120,9 @@
 						mui.toast('修改密码成功');
 						mui.back();
 					}
+					else{
+						mui.toast('修改密码失败');
+					}
 					
 				},
 				error:function(error){
@@ -116,6 +133,8 @@
 					plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
 				}
 			});
+			}else{
+				mui.toast('两次输入的密码不一致');
 			}
 			
 		});

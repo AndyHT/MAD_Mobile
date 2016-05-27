@@ -2,10 +2,16 @@ var mad=angular.module('mad',[]);
 mad.controller('mad',['$scope','$http',function($scope,$http){
 	$scope.test="ss";
 	$scope.getads=function(){
-		$http.get(severUrl+'/advert/all/'+userId+"?token="+token).then(function(response){
-			$scope.ads=response.data.adList;
-			console.log(JSON.stringify(response));
-			console.log($scope.ads)
+		$http.get(severUrl+'/advert/all/'+localStorage.userId+"?token="+localStorage.token).then(function(response){
+			console.log('lalala');
+			if(response.data.errCode==0){
+				$scope.ads=response.data.adList;
+				console.log(JSON.stringify(response));
+				console.log($scope.ads)
+			}else{
+				console.log(JSON.stringify(response));
+				setTimeout(function(){$scope.getads();},1000);
+			}
 		},function(error){
 			console.log(error);
 		});
@@ -15,7 +21,7 @@ mad.controller('mad',['$scope','$http',function($scope,$http){
 }]);
 mad.controller('madUser',['$scope','$http',function($scope,$http){
 	$scope.getInfo=function(){
-		$http.get(severUrl+'/account/'+userId+'?token='+token).then(function(response){
+		$http.get(severUrl+'/account/'+localStorage.userId+'?token='+localStorage.token).then(function(response){
 //			$scope.info=response.data;
 			var userINF = response.data;
 			if(userINF.VIN == "") userINF.VIN = "未认证驾驶证";
@@ -34,7 +40,7 @@ mad.controller('madUser',['$scope','$http',function($scope,$http){
 mad.controller('madMsg',['$scope','$http',function($scope,$http){
 	$scope.getMsg=function(){
 //		console.log('here');
-		$http.get(severUrl+'/msglist/'+userId+'?token='+token).then(function(response){
+		$http.get(severUrl+'/msglist/'+localStorage.userId+'?token='+localStorage.token).then(function(response){
 			$scope.msglist=response.data.messageList;
 //			console.log(JSON.stringify(response));
 			console.log(JSON.stringify(response.data));
@@ -46,7 +52,7 @@ mad.controller('madMsg',['$scope','$http',function($scope,$http){
 }]);
 mad.controller('madWdh',['$scope','$http',function($scope,$http){
 	$scope.getHistory=function(){
-		$http.get(severUrl+'/withdraw/'+userId+'?token='+token).then(function(response){
+		$http.get(severUrl+'/withdraw/'+localStorage.userId+'?token='+localStorage.token).then(function(response){
 			$scope.historyList=response.data.withdrawHistory;
 		},function(error){
 			console.log(error);

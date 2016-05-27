@@ -25,11 +25,11 @@
 			</div>
 			<div class="mui-input-row login">
 				<label><img class="input-img" src="img/user/RegPassword.png"/><a class="input-a">：</a></label>
-				<input type="text" class="mui-input-clear mui-input input-log" id="password" placeholder="密码"/>
+				<input type="password" class="mui-input-clear mui-input input-log" id="password" placeholder="密码"/>
 			</div>
 			<div class="mui-input-row login">
 				<label><img class="input-img" src="img/user/RegPassword.png"/><a class="input-a">：</a></label>
-				<input type="text" class="mui-input-clear mui-input input-log" id="repassword" placeholder="确认密码"/>
+				<input type="password" class="mui-input-clear mui-input input-log" id="repassword" placeholder="确认密码"/>
 			</div>
 			
 			
@@ -66,12 +66,42 @@
 		
 	</script>
 	<script type="text/javascript">
+		var namePattern=/^[A-Za-z0-9_\-\u4e00-\u9fa5]+$/;
+		var phoneNumPattern=/^0?(13|14|15|18|17)[0-9]{9}$/;
+		var passwordPattern=/^[A-Za-z0-9_\-!]{6,}$/;
 		var registerBtn=document.getElementById('register');
 		registerBtn.addEventListener('click',function(){
 			var name=document.getElementById('name').value;
 			var username=document.getElementById('username').value;
 			var password=document.getElementById('password').value;
 			var repassword=document.getElementById('repassword').value;
+//			console.log(namePattern.test(name));
+			var nameCheck = namePattern.test(name);
+//			console.log(phoneNumPattern.test(username));
+			var phoneNumCheck = phoneNumPattern.test(username);
+//			console.log(passwordPattern.test(password));
+			var passwordCheck = passwordPattern.test(password)&&passwordPattern.test(repassword);
+//			console.log(passwordPattern.test(repassword));
+			console.log(nameCheck&&phoneNumCheck&&passwordCheck);
+//			return;
+			if(!(nameCheck&&phoneNumCheck&&passwordCheck))
+			{
+				var msg='';
+				if(name==''){msg+='昵称'};
+				if(username==''){if(msg!='')msg+='、';msg+='手机号'};
+				if(password==''){if(msg!='')msg+='、';msg+='密码'};
+				if(repassword==''){if(msg!='')msg+='、';msg+='确认密码'};
+				if(msg==''){
+					if(!nameCheck){msg+='昵称'};
+					if(!phoneNumCheck){if(msg!='')msg+='、';msg+='手机号'};
+					if(!passwordCheck){if(msg!='')msg+='、';msg+='密码'};
+//					mui.toast(msg+'格式有误!');
+					if(msg=='密码'){
+						mui.toast('密码格式有误！长度至少6位且只允许_-!三种符号');
+					}else mui.toast(msg+'格式有误！');
+				}else mui.toast(msg+'不能留空');
+				return;
+			}
 			if(password==repassword){
 				mui.ajax(severUrl+'/register',{
 				data:{
@@ -89,16 +119,47 @@
 						login success 
 					*/
 					if(data.errCode==0){
-						plus.webview.show("ad-center","pop-in");
+						mui.toast('注册成功');
+						localStorage.token=data.token;
+						localStorage.userId=data.userId;
+						
+						mui.openWindow({
+							id:'ad-center',
+							url:'ad-center.html',
+							show:{
+								anishow:'pop-in'
+							},
+							styles: {
+								popGesture: 'none'
+							}
+						});
+						setTimeout(function(){mui.back();},500);
+//						mui.back();
+						document.getElementById('name').value='';
+						document.getElementById('username').value='';
+						document.getElementById('password').value='';
+						document.getElementById('repassword').value='';
 						plus.navigator.setStatusBarBackground("#41B17C");
 						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
+//						plus.webview.show("ad-center","pop-in");
+//						plus.navigator.setStatusBarBackground("#41B17C");
+//						plus.navigator.setStatusBarStyle( "UIStatusBarStyleBlackOpaque" );
+					}else if(data.errCode==105){
+						mui.toast('用户已存在');
+					}else if(data.errCode==102){
+						mui.toast('参数不正确');
 					}
 				},
 				error:function(error){
 					//document.getElementById('test').innerHTML=error.toString();
-					console.log(JSON.stringify(data));
+					console.log(JSON.stringify(error));
+					mui.toast('AJAX error:'+error);
 				}
 			});
+			}else{
+				mui.toast('两次输入的密码不一致');
+				document.getElementById('password').value='';
+				document.getElementById('repassword').value='';
 			}
 			
 		});

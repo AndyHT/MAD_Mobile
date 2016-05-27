@@ -19,10 +19,15 @@ div>h5{
 	border-radius: 10pt;
 }
 .img-left-ad{
-	width: 20pt;
+	/*width: 20pt;
 	height: 20pt;
 	margin-left: 7pt;
-	margin-top: 7pt;
+	margin-top: 7pt;*/
+	margin-top: 5pt;
+	/*margin-left: 5pt;*/
+	max-width: 33pt;
+	/*padding-right: 1pt;*/
+	position: absolute;
 }
 .white-text{
 	color: white;
