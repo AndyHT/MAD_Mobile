@@ -146,13 +146,12 @@ background-repeat:no-repeat;
     				mui.post(severUrl+'/check/submit',{
     					token:token,
     					userId:userId,
-    					check:{
-    						name:name,
-    						vehicleLicense:vehicleLicense,
-    						VIN:VIN,
-    						vehicleLicensePicture:img1,
-//  						carPicture:img2
-    					}
+    					name:name,
+    					vehicleLicense:vehicleLicense,
+    					VIN:VIN,
+    					vehicleLicensePicture:localStorage.img1,
+    					carPicture:localStorage.img2
+    					
     				},function(data){
     					console.log(data);
     				},function(error){
@@ -161,44 +160,10 @@ background-repeat:no-repeat;
     			};
     		},false);
     </script>
-    <script type="text/javascript">
-    	function ProcessFile1( e ) { 
-            var file = document.getElementById('img1').files[0];
-            if (file) {
-                
-                var reader = new FileReader();
-                reader.onload = function ( event ) { 
-                    img1 = event.target.result;
-                    console.log(img1);
-                    document.getElementById("toimg1").style.display = 'none';
-                    document.getElementById('timg1').src=img1;
-                    document.getElementById('timg1').style.display='block';
-                    
-                    };
-              }
-            reader.readAsDataURL( file );
-            }
-    	function ProcessFile2( e ) { 
-            var file = document.getElementById('img2').files[0];
-            if (file) {
-                
-                var reader = new FileReader(); 
-                reader.onload = function ( event ) { 
-                    img2 = event.target.result;
-                   	document.getElementById("toimg2").style.display = 'none';
-                    document.getElementById('timg2').src=img2;
-                    document.getElementById('timg2').style.display='block';
-                    };
-              }
-            reader.readAsDataURL( file );
-            }
-        function contentLoaded () {
-            document.getElementById('img1').addEventListener( 'change' ,
-			ProcessFile1 , false );
-			document.getElementById('img2').addEventListener( 'change' ,
-			ProcessFile2 , false );
-        }
-        window.addEventListener( "DOMContentLoaded" , contentLoaded , false );
-    </script>
+    <script src="js/moxie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/plupload.dev.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/qiniu.js" type="text/javascript" charset="utf-8"></script>
+    <!--<script src="js/plupload.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="js/upload.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
