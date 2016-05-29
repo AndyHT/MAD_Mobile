@@ -3,10 +3,10 @@ mad.controller('mad',['$scope','$http',function($scope,$http){
 	$scope.test="ss";
 	$scope.getads=function(){
 		$http.get(severUrl+'/advert/all/'+localStorage.userId+"?token="+localStorage.token).then(function(response){
-			console.log('lalala');
+//			console.log('lalala');
 			if(response.data.errCode==0){
 				$scope.ads=response.data.adList;
-				console.log(JSON.stringify(response));
+//				console.log(JSON.stringify(response));
 				console.log($scope.ads)
 			}else{
 				console.log(JSON.stringify(response));
@@ -58,10 +58,17 @@ mad.controller('madMsg',['$scope','$http',function($scope,$http){
 }]);
 mad.controller('madWdh',['$scope','$http',function($scope,$http){
 	$scope.getHistory=function(){
+		console.log('imhere');
 		$http.get(severUrl+'/withdraw/'+localStorage.userId+'?token='+localStorage.token).then(function(response){
 			$scope.historyList=response.data.withdrawHistory;
+			if(response.data.errCode==0){
+				mui.toast('获取提款记录成功');
+			}else{
+				mui.toast('获取提款记录失败');
+			}
 		},function(error){
 			console.log(error);
 		})
 	}
+	$scope.getHistory();
 }])

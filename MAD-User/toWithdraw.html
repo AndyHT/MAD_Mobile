@@ -70,7 +70,14 @@
 						login success 
 					*/
 					if(data.errCode==0){
+						mui.toast('提款成功');
 						console.log('success');
+					}else if(data.errCode == 99){
+						mui.toast('提款失败，提款金额不能为负');
+					}else if(data.errCode == 98){
+						mui.toast('提款失败，可提现金额不足');
+					}else{
+						mui.toast('抱歉，遇到未知错误，请联系管理员');
 					}
 				},
 				error:function(error){

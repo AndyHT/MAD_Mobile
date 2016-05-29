@@ -18,15 +18,15 @@
 			个人中心
 		</span></a>
 		<a id="title" class="mui-title">提款记录</a>
-		<a class="mui-icon mui-pull-right" ng-click="getHistory()" id="back"><span>
-			<h4>刷新</h4>
+		<a class="mui-icon mui-pull-right"  id="back"><span>
+			<h4 ng-click="getHistory()">刷新</h4>
 		</span></a>
 	</header>
 		
 	<div class="mui-content">
 		
 		<ul class="mui-table-view mui-table-view-stripped mui-table-view-condensed" >
-			<li class="mui-table-view-cell"	id="toaddetail">
+			<!--<li class="mui-table-view-cell"	id="toaddetail">
 				<div class="mui-table">
 					
 					<div class="mui-table-cell mui-col-xs-8">
@@ -45,7 +45,7 @@
 						</span>
 					</div>
 				</div>
-			</li>
+			</li>-->
 			<li class="mui-table-view-cell"	id="toaddetail" ng-repeat="history in historyList">
 				<div class="mui-table">
 					
