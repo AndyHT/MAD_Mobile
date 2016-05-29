@@ -171,7 +171,7 @@
 		</ul>
 			<img class="mui-pull-right oval140" name="other" src="img/user/Oval 140.png"/>
 	</div>
-	
+</div>
 	
 	
 	
@@ -179,28 +179,75 @@
 <script src="js/mui.min.js"></script>
 <script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="UTF-8">
-  	mui.init();
-  	mui.plusReady(function(){
-  		var SrcPathArr = new Array();
-  		var filterArray=[1,1,1,1,1,1,1,1,1];
-  		mui('.mui-content').on('tap','.oval140',function(){
-//		console.log(this.src);
-  		SrcPathArr = this.src.split("/");
-//		console.log(SrcPathArr.length);
-  		if(SrcPathArr[SrcPathArr.length-1] == "Oval%20140.png")
-  		{
-//			console.log('active2inActive');
-  			this.src="img/user/Oval 1402.png";
-  			console.log(this.name);
-  			setFilter(this.name,0);
+//	mui.init();
+//	mui.plusReady(function(){
+	var filterArray = new Array(9);
+  		getfilter(afterDanger);
+  		function afterDanger(){
+  			var SrcPathArr = new Array();
+	  		filterArray=danger;
+	  		console.log('filterArray:');
+	  		console.log(filterArray);
+//	  		mui('.oval140').forEach(function(e){
+//	  			console.log(e.src);
+//	  		});
+			for(var i = 0 ; i < 9; i++ )
+			{
+				var thispic = mui('.oval140')[i];
+				var spa = thispic.src.split("/");
+				var nowpic = spa[spa.length-1];
+				var name = thispic.name;
+				var pos = -1;
+				console.log(name);
+				switch(name){
+					case 'accommodation':
+						pos=0;
+						break;
+					case 'commodity':
+						pos=1;
+						break;
+					case 'education':
+						pos=2;
+						break;
+					case 'entertainment':
+						pos=3;
+						break;
+					case 'other':
+						pos=4;
+						break;
+					case 'recruit':
+						pos=5;
+						break;
+					case 'service':
+						pos=6;
+						break;
+					case 'social':
+						pos=7;
+						break;
+					case 'tenancy':
+						pos=8;
+						break;
+				}
+				if(filterArray[pos]==0){
+					thispic.src="img/user/Oval 1402.png";
+				}
+			}
+	  		
+	  		mui('.mui-content').on('tap','.oval140',function(){
+		  		SrcPathArr = this.src.split("/");
+		  		if(SrcPathArr[SrcPathArr.length-1] == "Oval%20140.png")
+		  		{
+		  			this.src="img/user/Oval 1402.png";
+		  			console.log(this.name);
+		  			setFilter(this.name,0);
+		  		}
+		  		else
+		  		{
+		  			this.src="img/user/Oval 140.png";
+		  			setFilter(this.name,1);
+		  		}
+		  	});
   		}
-  		else
-  		{
-//			console.log("inActive2active");
-  			this.src="img/user/Oval 140.png";
-  			setFilter(this.name,1);
-  		}
-  	});
 		function setFilter(name,val){
 			var tmp;
 			switch (name){
@@ -242,9 +289,8 @@
 			},function(data){
 				console.log(JSON.stringify(data));
 			},'json')
-				
 		}
-  	});
+//	});
 </script>	
 </body>
 </html>
