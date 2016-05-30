@@ -18,18 +18,18 @@
 		<a id="title" class="mui-title">提款</a></header>
 		<div class="mui-content">
 			<div class="mui-input-group">
-					
+
 					<div class="label">
 						提款账户
 					</div>
 					<div class="mui-input-row">
-					
+
 						<input type="text" id="account" placeholder="请填写账户">
 					</div><div class="label">
-						提款金额 
+						提款金额
 					</div>
 					<div class="mui-input-row">
-					
+
 						<input type="text" id="number" placeholder="请填写金额">
 					</div>
 					<div class="label">
@@ -37,9 +37,9 @@
 					</div>
 				</div>
 		</div>
-		
-		
-		
+
+
+
 	<script type="text/javascript">
 		mui.init();
 		mui.plusReady(function(){
@@ -66,8 +66,8 @@
 				success:function(data){
 					//document.getElementById('test').innerHTML=JSON.stringify(data);
 					console.log(JSON.stringify(data));
-					/* 
-						login success 
+					/*
+						login success
 					*/
 					if(data.errCode==0){
 						mui.toast('提款成功');
@@ -85,8 +85,10 @@
 					console.log(JSON.stringify(error));
 				}
 			});
-			}
-			
+    }else {
+      mui.toast('信息填写不完整');
+    }
+
 		});
 	</script>
 </body>
