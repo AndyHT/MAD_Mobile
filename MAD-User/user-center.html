@@ -62,25 +62,25 @@
 			<ul class="mui-table-view">
 				
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="">
 						<h5>手机号</h5>
 						<h5 class="h5-big">{{info.mobilePhone}}</h5>
 					</a>
 				</li>
-				<li class="mui-table-view-cell">
+				<!--<li class="mui-table-view-cell">
 					<a class="mui-navigate-right">
 						<h5>邮箱</h5>
 						<h5 class="h5-big">{{info.email}}</h5>
 					</a>
-				</li>
+				</li>-->
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="">
 						<h5>性别</h5>
 						<h5 class="h5-big">{{info.gender}}</h5>
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="">
 						<h5>支付宝账号</h5>
 						<h5 class="h5-big">{{info.alipay}}</h5>
 					</a>
@@ -89,7 +89,7 @@
 			<h5 class="left-10">行驶证照片</h5>
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="">
 						<img src="{{imgSrc}}" width="90%"/>
 					</a>
 				</li>
@@ -213,6 +213,12 @@
 //					console.log(JSON.stringify(error));
 //				}
 //		});
+	</script>
+	<script type="text/javascript"> 
+		var status=localStorage.status;
+		if(status==100){
+			document.getElementById('toIdentify').innerHTML='通过认证';
+		}
 	</script>
 	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>

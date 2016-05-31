@@ -163,6 +163,7 @@ background-repeat:no-repeat;
               console.log(JSON.stringify(data));
               if(data.errCode==0){
                 mui.toast('修改成功');
+                localStorage.status=100;
               }
               else{
                 mui.toast('修改失败');
