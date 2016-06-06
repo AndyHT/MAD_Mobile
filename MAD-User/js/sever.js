@@ -1,6 +1,6 @@
-//var severUrl='http://121.42.57.59:4000/user';
+var severUrl='http://121.42.57.59:4000/user';
 //var severUrl='http://127.0.0.1:4000/user';
-var severUrl='http://192.168.1.118:4000/user';
+//var severUrl='http://192.168.1.118:4000/user';
 var userId=localStorage.userId;
 var token=localStorage.token;
 var ads;

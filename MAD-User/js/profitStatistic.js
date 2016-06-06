@@ -10,7 +10,11 @@ ref.child(localStorage.userId).once('value',function(snap){
 	if(snap.val()!=null){
 		ref=ref.child(localStorage.userId);
 		//                  下面这个日期改成moment().format(YYYY-MM-DD'')以判断今日的TOP5统计量
-		ref.child('daily/'+'2016-05-27'+'/top5').orderByChild('income').limitToLast(5).once('value',function(snap){
+		ref.child('daily/'+moment().format('YYYY-MM-DD')+'/top5').orderByChild('income').limitToLast(5).once('value',function(snap){
+			if(snap.val()==null){
+				mui.toast('今日暂无广告收益排行');
+				return; 
+			}
 			for( key in snap.val()){
 				optionTOP5.legend.data.push(snap.val()[key].title);
 				optionTOP5.series[0].data.push({value:snap.val()[key].income,name:snap.val()[key].title});
@@ -19,7 +23,7 @@ ref.child(localStorage.userId).once('value',function(snap){
 			get7days(6);
 		});
 	}else{
-		mui.alert('您的账户下暂无统计数据','抱歉','知道了');
+		mui.toast('您的账户下暂无统计数据','抱歉','知道了');
 	}
 });
 monthBtn.addEventListener('tap',function(evnet){
@@ -106,7 +110,7 @@ function getDay() {
 		if(snap.val()==null){
 			document.getElementById('dayIncome').innerHTML='<h3>'+0+'</h3>'+'MAD币';
 		}else{
-			snap.val().income=dayIncome;
+			dayIncome=snap.val().income.toFixed(2);
 			document.getElementById('dayIncome').innerHTML='<h3>'+dayIncome+'</h3>'+'MAD币';
 			console.log(dayIncome);
 		}
@@ -117,7 +121,7 @@ function getDay() {
 			document.getElementById('totalIncome').innerHTML='<h3>'+0+'</h3>'+'MAD币';
 		}else{
 			//optionline.series[0].data.push(snap.val().income.toFixed(2));
-			document.getElementById('totalIncome').innerHTML='<h3>'+snap.val()+'</h3>'+'MAD币';
+			document.getElementById('totalIncome').innerHTML='<h3>'+snap.val().toFixed(2)+'</h3>'+'MAD币';
 
 		}
 	});
