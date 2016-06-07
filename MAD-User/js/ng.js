@@ -24,11 +24,12 @@ mad.controller('madUser',['$scope','$http',function($scope,$http){
 		$http.get(severUrl+'/account/'+localStorage.userId+'?token='+localStorage.token).then(function(response){
 //			$scope.info=response.data;
 			var userINF = response.data;
-			if(userINF.VIN == "") userINF.VIN = "未认证驾驶证";
+			if(userINF.license == "") userINF.license = "未认证驾驶证";
 			if(userINF.email == "") userINF.email = "未绑定邮箱";
 			if(userINF.gender == true) userINF.gender = "男";
 			else if(userINF.gender == false) userINF.gender = "女";
 			if(userINF.alipay == "") userINF.alipay = "未绑定支付宝账号";
+			if(userINF.VIN == "") userINF.VIN = "未认证车辆识别码";
 			$scope.info = userINF;
 			if(userINF.vehicleLicensePicture==''){
 				$scope.imgSrc='img/user/icon.png';
@@ -61,6 +62,22 @@ mad.controller('madWdh',['$scope','$http',function($scope,$http){
 		console.log('imhere');
 		$http.get(severUrl+'/withdraw/'+localStorage.userId+'?token='+localStorage.token).then(function(response){
 			$scope.historyList=response.data.withdrawHistory;
+			for (var i=0;i<$scope.historyList.length;i++) {
+				switch($scope.historyList[i].status)
+				{
+					case '00':
+						$scope.historyList[i].status='尚未通过';
+						break;
+					case '01':
+						$scope.historyList[i].status='等待审核';
+						break;
+					case '11':
+						$scope.historyList[i].status='审核通过';
+						break;
+					default:
+						$scope.historyList[i].status='状态异常';
+				}
+			};
 			if(response.data.errCode==0){
 				mui.toast('获取提款记录成功');
 			}else{
