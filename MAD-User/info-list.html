@@ -46,7 +46,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mui-table-view-cell"	id="toaddetail">
+			<li class="mui-table-view-cell"	id="toaddetail" ng-repeat="msg in msglist">
 				<div class="mui-table">
 					<div class="mui-table-cell mui-col-xs-2">
 						<img class="img-left-ad" src="img/user/lamp.png" style=""/>
@@ -55,18 +55,18 @@
 						<h4 class="mui-ellipsis">系统消息</h4>
 						<div class="mui-table">						
 							<div class="mui-table-cell mui-col-xs-11">
-								<h5>您的提现已到账！请注意查收，谢谢您的提现已到账！请注意查收，谢谢</h5>
+								<h5>{{msg.content}}</h5>
 							</div>
 						</div>			
 					</div>
 					<div class="mui-table-cell mui-col-xs-3 mui-text-right">
 						<span class="mui-h6">
-							2016-03-06<br/>16:00
+							{{msg.date}}
 						</span>
 					</div>
 				</div>
 			</li>
-			<li class="mui-table-view-cell"	id="toaddetail" ng-repeat="msg in msglist">
+			<!--<li class="mui-table-view-cell"	id="toaddetail" ng-repeat="msg in msglist">
 				<div class="mui-table">
 					<div class="mui-table-cell mui-col-xs-2">
 						<img class="img-left-ad" src="img/user/Group 2.png" style=""/>
@@ -85,7 +85,7 @@
 						</span>
 					</div>
 				</div>
-			</li>
+			</li>-->
 			
 		</ul>
 	</div>

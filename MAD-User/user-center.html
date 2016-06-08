@@ -68,7 +68,7 @@
 					</a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
+					<a class="">
 						<h5>车辆识别码</h5>
 						<h5 class="h5-big">{{info.VIN}}</h5>
 					</a>
@@ -183,8 +183,10 @@
 		console.log(localStorage.userId);
 		console.log(localStorage.token);
 		var thisWV = plus.webview.getWebviewById('ad-center');
+		var infow = plus.webview.getWebviewById('infolist');
 		plus.navigator.setStatusBarBackground("#D4EBEB");
 		plus.navigator.setStatusBarStyle( "UIStatusBarStyleDefault" );
+		plus.webview.close(infow);
 		plus.webview.close(thisWV);
 	}
 //		mui.ajax(severUrl+'/account/'+userId,{
@@ -218,6 +220,7 @@
 		var status=localStorage.status;
 		if(status==100){
 			document.getElementById('toIdentify').innerHTML='通过认证';
+			document.getElementById('toIdentify').disabled=true;
 		}
 	</script>
 	<script src="js/sever.js" type="text/javascript" charset="utf-8"></script>

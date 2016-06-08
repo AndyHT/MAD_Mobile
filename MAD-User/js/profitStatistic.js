@@ -6,6 +6,7 @@ var hasRecord = true;
 var active_tab = 'day';
 if(localStorage.userId==null) localStorage.userId='18521037217';
 getDay();
+get7days(6);
 ref.child(localStorage.userId).once('value',function(snap){
 	if(snap.val()!=null){
 		ref=ref.child(localStorage.userId);
@@ -42,7 +43,7 @@ yearBtn.addEventListener('tap',function(evnet){
 });
 dayBtn.addEventListener('tap',function(evnet){
 	active_tab='day';
-	echartline.setOption(optionline)
+	echartline.setOption(optionline);
 	optionline.xAxis.data=[];
 	optionline.series[0].data=[];
 	get7days(6);
